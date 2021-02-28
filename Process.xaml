@@ -13,7 +13,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1403,4230</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>853,4448</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="38">
@@ -104,7 +104,7 @@
       <AssemblyReference>UiPath.CV</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="" sap:VirtualizedContainerService.HintSize="518,4165" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="" sap:VirtualizedContainerService.HintSize="518,4343" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:Browser" Name="AllianceBrowser" />
       <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="Children" />
@@ -149,95 +149,84 @@
         <InArgument x:TypeArguments="x:String" x:Key="DateValidation">[DateToValidate]</InArgument>
       </ui:AddLogFields.Fields>
     </ui:AddLogFields>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="476,782" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-      <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="388,704" sap2010:WorkflowViewState.IdRef="Sequence_27">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <Sequence sap:VirtualizedContainerService.HintSize="346,612" sap2010:WorkflowViewState.IdRef="Sequence_26">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Move Files in Xcentric" sap:VirtualizedContainerService.HintSize="304,414" sap2010:WorkflowViewState.IdRef="Sequence_23">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
-                <Assign.To>
-                  <OutArgument x:TypeArguments="x:String">[SourceFolder1]</OutArgument>
-                </Assign.To>
-                <Assign.Value>
-                  <InArgument x:TypeArguments="x:String">S:\Department\Monthly Compilation Reports</InArgument>
-                </Assign.Value>
-              </Assign>
-              <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_2">
-                <Assign.To>
-                  <OutArgument x:TypeArguments="x:String">[DestinationFolder1]</OutArgument>
-                </Assign.To>
-                <Assign.Value>
-                  <InArgument x:TypeArguments="x:String">S:\Department\IT\UiPath\Project Workbooks</InArgument>
-                </Assign.Value>
-              </Assign>
-              <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_3">
-                <Assign.To>
-                  <OutArgument x:TypeArguments="x:String">[SignUpTracker]</OutArgument>
-                </Assign.To>
-                <Assign.Value>
-                  <InArgument x:TypeArguments="x:String">McD Monthly Report sign up tracker.xlsx</InArgument>
-                </Assign.Value>
-              </Assign>
-              <cxf:Xcentric_Move_Files In_SourceFileName="{x:Null}" Out_FilePathValidation="{x:Null}" DisplayName="Xcentric Move Files" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="Xcentric_Move_Files_3" In_CutXCopyC="X" In_DestinationFolder="S:\Department\UiPath Delivery\" In_ReplaceFiles="Y" In_SourceFolder="[&quot;\\Client\C$\Users\&quot;+Environment.UserName.ToString+&quot;\Downloads&quot;]" />
-            </Sequence>
-            <Sequence DisplayName="Move Files into Local " sap:VirtualizedContainerService.HintSize="304,66" sap2010:WorkflowViewState.IdRef="Sequence_25">
-              <Sequence.Variables>
-                <Variable x:TypeArguments="x:String" Name="SourceFolder1" />
-                <Variable x:TypeArguments="x:String" Name="DestinationFolder1" />
-                <Variable x:TypeArguments="x:String" Name="SignUpTracker" />
-              </Sequence.Variables>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_4">
-                <Assign.To>
-                  <OutArgument x:TypeArguments="x:String">[SourceFolder1]</OutArgument>
-                </Assign.To>
-                <Assign.Value>
-                  <InArgument x:TypeArguments="x:String">S:\Department\Monthly Compilation Reports</InArgument>
-                </Assign.Value>
-              </Assign>
-              <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_5">
-                <Assign.To>
-                  <OutArgument x:TypeArguments="x:String">[DestinationFolder1]</OutArgument>
-                </Assign.To>
-                <Assign.Value>
-                  <InArgument x:TypeArguments="x:String">S:\Department\IT\UiPath\Project Workbooks</InArgument>
-                </Assign.Value>
-              </Assign>
-              <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_6">
-                <Assign.To>
-                  <OutArgument x:TypeArguments="x:String">[SignUpTracker]</OutArgument>
-                </Assign.To>
-                <Assign.Value>
-                  <InArgument x:TypeArguments="x:String">McD Monthly Report sign up tracker.xlsx</InArgument>
-                </Assign.Value>
-              </Assign>
-              <cxf:Xcentric_Move_Files In_SourceFileName="{x:Null}" Out_FilePathValidation="{x:Null}" DisplayName="Xcentric Move Files" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="Xcentric_Move_Files_4" In_CutXCopyC="X" In_DestinationFolder="S:\Department\UiPath Delivery\" In_ReplaceFiles="Y" In_SourceFolder="[&quot;\\Client\C$\Users\&quot;+Environment.UserName.ToString+&quot;\Downloads&quot;]" />
-            </Sequence>
-          </Sequence>
-        </Sequence>
-      </ui:CommentOut.Body>
-    </ui:CommentOut>
+    <Sequence sap:VirtualizedContainerService.HintSize="476,960" sap2010:WorkflowViewState.IdRef="Sequence_26">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Sequence DisplayName="Move Files in Xcentric" sap:VirtualizedContainerService.HintSize="304,414" sap2010:WorkflowViewState.IdRef="Sequence_23">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">[SourceFolder1]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">S:\Department\Monthly Compilation Reports</InArgument>
+          </Assign.Value>
+        </Assign>
+        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">[DestinationFolder1]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">S:\Department\IT\UiPath\Project Workbooks</InArgument>
+          </Assign.Value>
+        </Assign>
+        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">[SignUpTracker]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">McD Monthly Report sign up tracker.xlsx</InArgument>
+          </Assign.Value>
+        </Assign>
+        <cxf:Xcentric_Move_Files In_SourceFileName="{x:Null}" Out_FilePathValidation="{x:Null}" DisplayName="Xcentric Move Files" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="Xcentric_Move_Files_3" In_CutXCopyC="X" In_DestinationFolder="S:\Department\UiPath Delivery\" In_ReplaceFiles="Y" In_SourceFolder="[&quot;\\Client\C$\Users\&quot;+Environment.UserName.ToString.ToLower+&quot;\Downloads&quot;]" />
+      </Sequence>
+      <Sequence DisplayName="Move Files into Local " sap:VirtualizedContainerService.HintSize="304,414" sap2010:WorkflowViewState.IdRef="Sequence_25">
+        <Sequence.Variables>
+          <Variable x:TypeArguments="x:String" Name="SourceFolder1" />
+          <Variable x:TypeArguments="x:String" Name="DestinationFolder1" />
+          <Variable x:TypeArguments="x:String" Name="SignUpTracker" />
+        </Sequence.Variables>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">[SourceFolder1]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">S:\Department\Monthly Compilation Reports</InArgument>
+          </Assign.Value>
+        </Assign>
+        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">[DestinationFolder1]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">S:\Department\IT\UiPath\Project Workbooks</InArgument>
+          </Assign.Value>
+        </Assign>
+        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">[SignUpTracker]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">McD Monthly Report sign up tracker.xlsx</InArgument>
+          </Assign.Value>
+        </Assign>
+        <cxf:Xcentric_Move_Files In_SourceFileName="{x:Null}" Out_FilePathValidation="{x:Null}" DisplayName="Xcentric Move Files" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="Xcentric_Move_Files_4" In_CutXCopyC="X" In_DestinationFolder="S:\Department\UiPath Delivery\" In_ReplaceFiles="Y" In_SourceFolder="[&quot;\\Client\C$\Users\&quot;+Environment.UserName.ToString.ToLower+&quot;\Downloads&quot;]" />
+      </Sequence>
+    </Sequence>
     <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="476,222" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">

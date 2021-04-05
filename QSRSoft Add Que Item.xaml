@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Add_Que_Item" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Add_Que_Item" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_QueueName" Type="InArgument(x:String)" />
     <x:Property Name="in_ReportName" Type="InArgument(x:String)" />
@@ -10,11 +10,12 @@
     <x:Property Name="in_Priority" Type="InArgument(x:String)" />
     <x:Property Name="in_Deadline" Type="InArgument(s:DateTime)" />
     <x:Property Name="in_XcentricFolder" Type="InArgument(x:String)" />
+    <x:Property Name="in_FirmID" Type="InArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1014,715</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>996,645</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="26">
+    <scg:List x:TypeArguments="x:String" Capacity="52">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System</x:String>
@@ -41,6 +42,7 @@
       <x:String>System.Xml.Linq</x:String>
       <x:String>System.Net.Mail</x:String>
       <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -85,7 +87,7 @@
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Add Que Item" sap:VirtualizedContainerService.HintSize="526,610" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Add Que Item" sap:VirtualizedContainerService.HintSize="695,554" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:DateTime" Name="Deadline" />
       <Variable x:TypeArguments="s:DateTime" Name="PostponeDate" />
@@ -95,38 +97,84 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <If Condition="[String.IsNullOrEmpty(in_Priority)]" sap:VirtualizedContainerService.HintSize="484,208" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[in_Priority = &quot;y&quot; or in_Priority = &quot;Y&quot;]" sap:VirtualizedContainerService.HintSize="653,400" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="304,252" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign.To>
+              <OutArgument x:TypeArguments="s:DateTime">[Deadline]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="s:DateTime">[in_Deadline]</InArgument>
+            </Assign.Value>
+          </Assign>
+          <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+            <Assign.To>
+              <OutArgument x:TypeArguments="s:DateTime">[PostponeDate]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="s:DateTime">[in_PostponeDate]</InArgument>
+            </Assign.Value>
+          </Assign>
+        </Sequence>
+      </If.Then>
       <If.Else>
-        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
-          <Assign.To>
-            <OutArgument x:TypeArguments="s:DateTime">[Deadline]</OutArgument>
-          </Assign.To>
-          <Assign.Value>
-            <InArgument x:TypeArguments="s:DateTime">[in_Deadline]</InArgument>
-          </Assign.Value>
-        </Assign>
+        <Sequence sap:VirtualizedContainerService.HintSize="304,252" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+            <Assign.To>
+              <OutArgument x:TypeArguments="s:DateTime">[Deadline]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="s:DateTime">[in_Deadline.AddDays(2)]</InArgument>
+            </Assign.Value>
+          </Assign>
+          <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+            <Assign.To>
+              <OutArgument x:TypeArguments="s:DateTime">[PostponeDate]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="s:DateTime">[in_PostponeDate.AddDays(1)]</InArgument>
+            </Assign.Value>
+          </Assign>
+        </Sequence>
       </If.Else>
     </If>
-    <If Condition="[String.IsNullOrEmpty(in_PostponeDate.ToString)]" sap:VirtualizedContainerService.HintSize="484,208" sap2010:WorkflowViewState.IdRef="If_2">
-      <If.Else>
-        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_2">
-          <Assign.To>
-            <OutArgument x:TypeArguments="s:DateTime">[PostponeDate]</OutArgument>
-          </Assign.To>
-          <Assign.Value>
-            <InArgument x:TypeArguments="s:DateTime">[in_PostponeDate]</InArgument>
-          </Assign.Value>
-        </Assign>
-      </If.Else>
-    </If>
-    <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DeferDate="[in_PostponeDate]" DisplayName="Add Queue Item" DueDate="[in_Deadline]" sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" Priority="Normal" QueueType="[in_QueueName]" Reference="[in_ClientNum+&quot;_&quot;+in_ClientName+&quot;_&quot;+now.date.ToString(&quot;MMddyyyy&quot;)]">
+    <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DeferDate="[PostponeDate]" DisplayName="Add Queue Item" DueDate="[Deadline]" sap:VirtualizedContainerService.HintSize="653,22" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" Priority="Normal" QueueType="[in_QueueName]" Reference="[in_ClientNum+&quot;_&quot;+in_ClientName+&quot;_&quot;+now.date.ToString(&quot;MMddyyyy&quot;)]">
       <ui:AddQueueItem.ItemInformation>
-        <InArgument x:TypeArguments="x:String" x:Key="in_ClientNum">[in_ClientNum]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_ClientName">[in_ClientName]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_ReportName">[in_ReportName]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_StartDate">[in_StartDate]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_EndDate">[in_EndDate]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_XcentricFolder">[in_XcentricFolder]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_ClientNum">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_ClientNum" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_ClientName">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_ClientName" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_ReportName">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_ReportName" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_StartDate">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_StartDate" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_EndDate">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_EndDate" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_XcentricFolder">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_XcentricFolder" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_FirmID">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_FirmID" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_FileName">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_ReportName" />
+        </InArgument>
       </ui:AddQueueItem.ItemInformation>
     </ui:AddQueueItem>
   </Sequence>

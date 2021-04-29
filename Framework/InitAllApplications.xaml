@@ -1,11 +1,11 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Initialize_Applications" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:cx="clr-namespace:CMCo_Library.Xcentric;assembly=CMCo Library" xmlns:cxf="clr-namespace:CMCo_Library.Xcentric.File_Explorer;assembly=CMCo Library" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Initialize_Applications" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>995,668</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>899,618</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Initialization_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -31,17 +31,19 @@
       <x:String>UiPath.Core</x:String>
       <x:String>System.Security</x:String>
       <x:String>UiPath.Core.Activities</x:String>
-      <x:String>CMCo_Alliance.Components</x:String>
+      <x:String>CMCo_Proliant</x:String>
       <x:String>System.Collections</x:String>
-      <x:String>CMCo_Library.Xcentric</x:String>
       <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
       <x:String>System.Activities.DynamicUpdate</x:String>
-      <x:String>UiPath.Platform.ObjectLibrary</x:String>
-      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
       <x:String>System.Reflection</x:String>
       <x:String>System.Runtime.InteropServices</x:String>
-      <x:String>CMCo_Library.Xcentric.File_Explorer</x:String>
-      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>CMCo_WebFFS</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -65,33 +67,45 @@
       <AssemblyReference>TimeSpan2</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
-      <AssemblyReference>CMCo Alliance_Expressions_22919497</AssemblyReference>
-      <AssemblyReference>CMCo Alliance_Expressions_23153411</AssemblyReference>
-      <AssemblyReference>CMCo Alliance_Expressions_23565429</AssemblyReference>
-      <AssemblyReference>CMCo Alliance_Expressions_28896832</AssemblyReference>
-      <AssemblyReference>CMCo Alliance_Expressions_62158396</AssemblyReference>
-      <AssemblyReference>CMCo Alliance_Expressions_40359016</AssemblyReference>
-      <AssemblyReference>CMCo Alliance_Expressions_62354573</AssemblyReference>
-      <AssemblyReference>CMCo Alliance_Expressions_6371533</AssemblyReference>
-      <AssemblyReference>CMCo Alliance</AssemblyReference>
-      <AssemblyReference>CMCo Alliance_Expressions_10487491</AssemblyReference>
-      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
-      <AssemblyReference>CMCo Library_Expressions_33638184</AssemblyReference>
-      <AssemblyReference>CMCo Library</AssemblyReference>
-      <AssemblyReference>UiPath.Platform</AssemblyReference>
-      <AssemblyReference>System.Memory</AssemblyReference>
-      <AssemblyReference>CMCo Library_Expressions_4553093</AssemblyReference>
-      <AssemblyReference>CMCo Library_Expressions_66265894</AssemblyReference>
-      <AssemblyReference>CMCo Library_Expressions_49620939</AssemblyReference>
+      <AssemblyReference>CMCo Proliant</AssemblyReference>
+      <AssemblyReference>CMCo Proliant_Expressions_10819091</AssemblyReference>
+      <AssemblyReference>CMCo Proliant_Expressions_12003659</AssemblyReference>
+      <AssemblyReference>CMCo Proliant_Expressions_12399658</AssemblyReference>
+      <AssemblyReference>CMCo Proliant_Expressions_46110007</AssemblyReference>
+      <AssemblyReference>CMCo Proliant_Expressions_13142459</AssemblyReference>
+      <AssemblyReference>CMCo Proliant_Expressions_51053727</AssemblyReference>
+      <AssemblyReference>CMCo Proliant_Expressions_47214283</AssemblyReference>
+      <AssemblyReference>CMCo Proliant_Expressions_55528583</AssemblyReference>
+      <AssemblyReference>CMCo Proliant_Expressions_16929159</AssemblyReference>
+      <AssemblyReference>CMCo Proliant_Expressions_17186187</AssemblyReference>
+      <AssemblyReference>CMCo Proliant_Expressions_5687657</AssemblyReference>
+      <AssemblyReference>CMCo Proliant_Expressions_47373701</AssemblyReference>
+      <AssemblyReference>CMCo Proliant_Expressions_27793379</AssemblyReference>
+      <AssemblyReference>CMCo Proliant_Expressions_57372610</AssemblyReference>
+      <AssemblyReference>CMCo Proliant_Expressions_1951627</AssemblyReference>
+      <AssemblyReference>CMCo Proliant_Expressions_30386741</AssemblyReference>
+      <AssemblyReference>CMCo Proliant_Expressions_63160293</AssemblyReference>
+      <AssemblyReference>CMCo Proliant_Expressions_48635142</AssemblyReference>
+      <AssemblyReference>CMCo Proliant_Expressions_20781528</AssemblyReference>
+      <AssemblyReference>CMCo Proliant_Expressions_58050252</AssemblyReference>
+      <AssemblyReference>CMCo Proliant_Expressions_36573983</AssemblyReference>
+      <AssemblyReference>CMCo Proliant_Expressions_63412609</AssemblyReference>
+      <AssemblyReference>CMCo Proliant_Expressions_27585220</AssemblyReference>
+      <AssemblyReference>CMCo Proliant_Expressions_37624473</AssemblyReference>
+      <AssemblyReference>CMCo Proliant_Expressions_49102435</AssemblyReference>
+      <AssemblyReference>CMCo Proliant_Expressions_66542444</AssemblyReference>
+      <AssemblyReference>CMCo Proliant_Expressions_41576731</AssemblyReference>
+      <AssemblyReference>CMCo Proliant_Expressions_7654348</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
-      <AssemblyReference>System.ValueTuple</AssemblyReference>
-      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>CMCo-WebFFS_Expressions_35306501</AssemblyReference>
+      <AssemblyReference>CMCo-WebFFS</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
-      <AssemblyReference>UiPath.Mail</AssemblyReference>
-      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="376,349" sap2010:WorkflowViewState.IdRef="Sequence_9">
+  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="376,225" sap2010:WorkflowViewState.IdRef="Sequence_9">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -99,7 +113,5 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log message (Initialize applications)" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Opening applications...&quot;]" />
-    <cx:Xcentric_Login DisplayName="Xcentric Login" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Xcentric_Login_1" in_AssetName="[Environment.MachineName.ToString+&quot;_Xcentric&quot;]" />
-    <cxf:Xcentric_Open_File_Explorer DisplayName="Xcentric Open File Explorer" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Xcentric_Open_File_Explorer_1" />
   </Sequence>
 </Activity>

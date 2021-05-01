@@ -9,10 +9,11 @@
     <x:Property Name="in_EndDate" Type="InArgument(x:String)" />
     <x:Property Name="in_Priority" Type="InArgument(x:String)" />
     <x:Property Name="in_Deadline" Type="InArgument(s:DateTime)" />
-    <x:Property Name="in_XcentricFolder" Type="InArgument(x:String)" />
     <x:Property Name="in_FirmID" Type="InArgument(x:String)" />
+    <x:Property Name="in_Subfolder" Type="InArgument(x:String)" />
+    <x:Property Name="in_Query" Type="InArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>996,645</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>926,685</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="52">
@@ -46,7 +47,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="38">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="76">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -85,6 +86,7 @@
       <AssemblyReference>UiPath.CV</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Add Que Item" sap:VirtualizedContainerService.HintSize="695,554" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -149,7 +151,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DeferDate="[PostponeDate]" DisplayName="Add Queue Item" DueDate="[Deadline]" sap:VirtualizedContainerService.HintSize="653,22" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" Priority="Normal" QueueType="[in_QueueName]" Reference="[in_ClientNum+&quot;_&quot;+in_ClientName+&quot;_&quot;+now.date.ToString(&quot;MMddyyyy&quot;)]">
+    <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DeferDate="[PostponeDate]" DisplayName="Add Queue Item" DueDate="[Deadline]" sap:VirtualizedContainerService.HintSize="653,22" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" Priority="Normal" QueueType="[in_QueueName]" Reference="[in_ClientNum+&quot; &quot;+now.date.ToString(&quot;MMddyyyy&quot;)]">
       <ui:AddQueueItem.ItemInformation>
         <InArgument x:TypeArguments="x:String" x:Key="in_ClientNum">
           <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_ClientNum" />
@@ -166,14 +168,17 @@
         <InArgument x:TypeArguments="x:String" x:Key="in_EndDate">
           <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_EndDate" />
         </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_XcentricFolder">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_XcentricFolder" />
-        </InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_FirmID">
           <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_FirmID" />
         </InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_FileName">
           <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_ReportName" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Query">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Query" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Subfolder">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Subfolder" />
         </InArgument>
       </ui:AddQueueItem.ItemInformation>
     </ui:AddQueueItem>

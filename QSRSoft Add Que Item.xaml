@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Add_Que_Item" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Add_Que_Item" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_QueueName" Type="InArgument(x:String)" />
     <x:Property Name="in_ReportName" Type="InArgument(x:String)" />
@@ -12,8 +12,12 @@
     <x:Property Name="in_FirmID" Type="InArgument(x:String)" />
     <x:Property Name="in_Subfolder" Type="InArgument(x:String)" />
     <x:Property Name="in_Query" Type="InArgument(x:String)" />
+    <x:Property Name="in_RequestWorkbookName" Type="InArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>926,685</sap:VirtualizedContainerService.HintSize>
+  <this:Add_Que_Item.in_RequestWorkbookName>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Add_Que_Item.in_RequestWorkbookName>
+  <sap:VirtualizedContainerService.HintSize>948,629</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="52">
@@ -86,10 +90,9 @@
       <AssemblyReference>UiPath.CV</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Add Que Item" sap:VirtualizedContainerService.HintSize="695,554" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Add Que Item" sap:VirtualizedContainerService.HintSize="695,564" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:DateTime" Name="Deadline" />
       <Variable x:TypeArguments="s:DateTime" Name="PostponeDate" />
@@ -99,7 +102,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <If Condition="[in_Priority = &quot;y&quot; or in_Priority = &quot;Y&quot;]" sap:VirtualizedContainerService.HintSize="653,400" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[in_Priority = &quot;y&quot; or in_Priority = &quot;Y&quot;]" sap:VirtualizedContainerService.HintSize="653,410" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
         <Sequence sap:VirtualizedContainerService.HintSize="304,252" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
@@ -179,6 +182,9 @@
         </InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_Subfolder">
           <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Subfolder" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_RequestWorkbookName">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_RequestWorkbookName" />
         </InArgument>
       </ui:AddQueueItem.ItemInformation>
     </ui:AddQueueItem>

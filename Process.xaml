@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>799.2,3662.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>810,3360</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="48">
@@ -119,10 +119,9 @@
       <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
       <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="" sap:VirtualizedContainerService.HintSize="641.6,3597.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="" sap:VirtualizedContainerService.HintSize="644,3295" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_QSRSoft" />
       <Variable x:TypeArguments="x:String" Name="LocalProjectWorkbookFolderPath" />
@@ -140,7 +139,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap:VirtualizedContainerService.HintSize="600,1864" sap2010:WorkflowViewState.IdRef="Sequence_65">
+    <Sequence sap:VirtualizedContainerService.HintSize="602,1909" sap2010:WorkflowViewState.IdRef="Sequence_65">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="AppID" />
         <Variable x:TypeArguments="x:String" Name="AppSecret" />
@@ -159,8 +158,8 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <co:Office_365_Assets ApplicationID="[AppID]" ApplicationSecret="[AppSecret]" DisplayName="Office 365 Assets" sap:VirtualizedContainerService.HintSize="558.4,22.4" sap2010:WorkflowViewState.IdRef="Office_365_Assets_1" Office365SV="[SV]" Tenant="[Tenant]" password="[password]" username="[username]" />
-      <Assign sap:VirtualizedContainerService.HintSize="558.4,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+      <co:Office_365_Assets ApplicationID="[AppID]" ApplicationSecret="[AppSecret]" DisplayName="Office 365 Assets" sap:VirtualizedContainerService.HintSize="560,22" sap2010:WorkflowViewState.IdRef="Office_365_Assets_1" Office365SV="[SV]" Tenant="[Tenant]" password="[password]" username="[username]" />
+      <Assign sap:VirtualizedContainerService.HintSize="560,60" sap2010:WorkflowViewState.IdRef="Assign_6">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">[SharePointSite]</OutArgument>
         </Assign.To>
@@ -168,7 +167,7 @@
           <InArgument x:TypeArguments="x:String">["https://concannonmiller.sharepoint.com/sites/CMCoInnovate"]</InArgument>
         </Assign.Value>
       </Assign>
-      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="558.4,130.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="560,129" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
         <ui:MultipleAssign.AssignOperations>
           <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
@@ -190,13 +189,13 @@
           </scg:List>
         </ui:MultipleAssign.AssignOperations>
       </ui:MultipleAssign>
-      <uma:Office365ApplicationScope ContinueOnError="{x:Null}" Password="{x:Null}" Timeout="{x:Null}" ApplicationId="[AppID]" ApplicationSecret="[AppSecret]" AuthenticationType="ApplicationIdAndSecret" DisplayName="Microsoft Office 365 Scope" sap:VirtualizedContainerService.HintSize="558.4,1438.4" sap2010:WorkflowViewState.IdRef="Office365ApplicationScope_1" OAuthApplication="UiPath" SecureApplicationSecret="[SV]" SecurePassword="[password]" Services="Files" Tenant="[Tenant]" Username="[username]">
+      <uma:Office365ApplicationScope ContinueOnError="{x:Null}" Password="{x:Null}" Timeout="{x:Null}" ApplicationId="[AppID]" ApplicationSecret="[AppSecret]" AuthenticationType="ApplicationIdAndSecret" DisplayName="Microsoft Office 365 Scope" sap:VirtualizedContainerService.HintSize="560,1486" sap2010:WorkflowViewState.IdRef="Office365ApplicationScope_1" OAuthApplication="UiPath" SecureApplicationSecret="[SV]" SecurePassword="[password]" Services="Files" Tenant="[Tenant]" Username="[username]">
         <uma:Office365ApplicationScope.Body>
           <ActivityAction x:TypeArguments="mg:GraphServiceClient">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="mg:GraphServiceClient" Name="ParentScope" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="524.8,1352" sap2010:WorkflowViewState.IdRef="Sequence_64">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="526,1400" sap2010:WorkflowViewState.IdRef="Sequence_64">
               <Sequence.Variables>
                 <Variable x:TypeArguments="mg:DriveItem" Name="AllianceWorkbook" />
               </Sequence.Variables>
@@ -205,8 +204,8 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <umaf:FindFilesAndFolders DriveName="{x:Null}" Results="{x:Null}" DisplayName="Find Files And Folders" First="[SignUpTracker]" sap:VirtualizedContainerService.HintSize="483.2,85.6" sap2010:WorkflowViewState.IdRef="FindFilesAndFolders_1" Query="[RequestWorkbookName]" SiteUrl="[SharePointSite]" Subfolder="[RequestSubfolder]" />
-              <If Condition="[in_Config(&quot;RunQSRSoft&quot;).ToString = &quot;Y&quot;]" DisplayName="QSRSoft" sap:VirtualizedContainerService.HintSize="483.2,22.4" sap2010:WorkflowViewState.IdRef="If_1">
+              <umaf:FindFilesAndFolders DriveName="{x:Null}" Results="{x:Null}" DisplayName="Find Files And Folders" First="[SignUpTracker]" sap:VirtualizedContainerService.HintSize="484,84" sap2010:WorkflowViewState.IdRef="FindFilesAndFolders_1" Query="[RequestWorkbookName]" SiteUrl="[SharePointSite]" Subfolder="[RequestSubfolder]" />
+              <If Condition="[in_Config(&quot;RunQSRSoft&quot;).ToString = &quot;Y&quot;]" DisplayName="QSRSoft" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="If_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -226,7 +225,7 @@
                   </Sequence>
                 </If.Then>
               </If>
-              <If Condition="[in_Config(&quot;RunAlliance&quot;).ToString = &quot;Y&quot;]" DisplayName="Alliance" sap:VirtualizedContainerService.HintSize="483.2,22.4" sap2010:WorkflowViewState.IdRef="If_3">
+              <If Condition="[in_Config(&quot;RunAlliance&quot;).ToString = &quot;Y&quot;]" DisplayName="Alliance" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="If_3">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -248,7 +247,7 @@
                   </Sequence>
                 </If.Then>
               </If>
-              <If Condition="[in_Config(&quot;RunProliant&quot;).ToString = &quot;Y&quot;]" DisplayName="Proliant" sap:VirtualizedContainerService.HintSize="483.2,1008.8" sap2010:WorkflowViewState.IdRef="If_2">
+              <If Condition="[in_Config(&quot;RunProliant&quot;).ToString = &quot;Y&quot;]" DisplayName="Proliant" sap:VirtualizedContainerService.HintSize="484,1002" sap2010:WorkflowViewState.IdRef="If_2">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -256,15 +255,15 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <If.Then>
-                  <Sequence DisplayName="2.2 Proliant " sap:VirtualizedContainerService.HintSize="375.2,829.6" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                  <Sequence DisplayName="2.2 Proliant " sap:VirtualizedContainerService.HintSize="376,826" sap2010:WorkflowViewState.IdRef="Sequence_33">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="333.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="Proliant" />
-                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="333.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[SignUpTracker.name.ToString]" />
+                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="Proliant" />
+                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[SignUpTracker.name.ToString]" />
                     <umae:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_Proliant]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="333.6,183.2" sap2010:WorkflowViewState.IdRef="ReadRange_3" SheetName="Proliant" ValuesType="Text" Workbook="[SignUpTracker]">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -283,7 +282,7 @@
         </uma:Office365ApplicationScope.Body>
       </uma:Office365ApplicationScope>
     </Sequence>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="600,193.6" sap2010:WorkflowViewState.IdRef="CommentOut_13">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="602,193" sap2010:WorkflowViewState.IdRef="CommentOut_13">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="241.6,115.2" sap2010:WorkflowViewState.IdRef="Sequence_62">
           <sap:WorkflowViewStateService.ViewState>
@@ -342,7 +341,7 @@
         </Sequence>
       </ui:CommentOut.Body>
     </ui:CommentOut>
-    <If Condition="[in_Config(&quot;RunQSRSoft&quot;).ToString = &quot;Y&quot;]" sap:VirtualizedContainerService.HintSize="600,292.8" sap2010:WorkflowViewState.IdRef="If_7">
+    <If Condition="[in_Config(&quot;RunQSRSoft&quot;).ToString = &quot;Y&quot;]" sap:VirtualizedContainerService.HintSize="602,291" sap2010:WorkflowViewState.IdRef="If_7">
       <If.Then>
         <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke QSRSoft Dispatcher workflow" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="QSRSoft Dispatcher.xaml">
           <ui:InvokeWorkflowFile.Arguments>
@@ -352,16 +351,12 @@
         </ui:InvokeWorkflowFile>
       </If.Then>
     </If>
-    <If Condition="[in_Config(&quot;RunProliant&quot;).ToString = &quot;Y&quot;]" sap:VirtualizedContainerService.HintSize="600,292.8" sap2010:WorkflowViewState.IdRef="If_8">
+    <If Condition="[in_Config(&quot;RunProliant&quot;).ToString = &quot;Y&quot;]" sap:VirtualizedContainerService.HintSize="602,289" sap2010:WorkflowViewState.IdRef="If_8">
       <If.Then>
-        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Proliant Dispatcher workflow" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Proliant DispatcherV2.xaml">
+        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Proliant Dispatcher workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Proliant DispatcherV2.xaml">
           <ui:InvokeWorkflowFile.Arguments>
-            <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
-              <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="in_Config" />
-            </InArgument>
-            <InArgument x:TypeArguments="x:String" x:Key="in_ConfigSharePointSite">
-              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_ConfigSharePointSite" />
-            </InArgument>
+            <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="in_ConfigSharePointSite">[in_ConfigSharePointSite]</InArgument>
           </ui:InvokeWorkflowFile.Arguments>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -372,18 +367,9 @@
         </ui:InvokeWorkflowFile>
       </If.Then>
     </If>
-    <If Condition="[in_Config(&quot;RunProliantPPP&quot;).ToString = &quot;Y&quot;]" sap:VirtualizedContainerService.HintSize="600,292.8" sap2010:WorkflowViewState.IdRef="If_5">
+    <If Condition="[in_Config(&quot;RunAlliance&quot;).ToString = &quot;Y&quot;]" sap:VirtualizedContainerService.HintSize="602,289" sap2010:WorkflowViewState.IdRef="If_6">
       <If.Then>
-        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke PPP Proliant Dispatcher workflow" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="PPP Proliant Dispatcher.xaml">
-          <ui:InvokeWorkflowFile.Arguments>
-            <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
-          </ui:InvokeWorkflowFile.Arguments>
-        </ui:InvokeWorkflowFile>
-      </If.Then>
-    </If>
-    <If Condition="[in_Config(&quot;RunAlliance&quot;).ToString = &quot;Y&quot;]" sap:VirtualizedContainerService.HintSize="600,292.8" sap2010:WorkflowViewState.IdRef="If_6">
-      <If.Then>
-        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Alliance Dispatcher workflow" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Alliance Dispatcher.xaml">
+        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Alliance Dispatcher workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Alliance Dispatcher.xaml">
           <ui:InvokeWorkflowFile.Arguments>
             <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
             <InArgument x:TypeArguments="x:String" x:Key="in_ConfigSharePointSite">[in_ConfigSharePointSite]</InArgument>

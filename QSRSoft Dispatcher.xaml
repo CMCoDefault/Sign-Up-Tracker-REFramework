@@ -9,7 +9,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>948,10464</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>878,4789</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Add_Items_to_Que_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="38">
@@ -94,7 +94,7 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Dispatcher" sap:VirtualizedContainerService.HintSize="676,10399" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Dispatcher" sap:VirtualizedContainerService.HintSize="644,4724" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="UserProfile" />
       <Variable x:TypeArguments="x:String" Name="ProjectWorkbook" />
@@ -140,8 +140,8 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <clf:Assign_User_Profile DisplayName="Assign User Profile" sap:VirtualizedContainerService.HintSize="634,22" sap2010:WorkflowViewState.IdRef="Assign_User_Profile_2" argumentUserProfile="[UserProfile]" />
-    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="634,408" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <clf:Assign_User_Profile DisplayName="Assign User Profile" sap:VirtualizedContainerService.HintSize="602,22" sap2010:WorkflowViewState.IdRef="Assign_User_Profile_2" argumentUserProfile="[UserProfile]" />
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="602,408" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -241,14 +241,14 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:MultipleAssign>
-    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="634,61" sap2010:WorkflowViewState.IdRef="WriteLine_13" Text="[&quot;MA Postpone: &quot;+ MassPostponeDate.ToString(&quot;MM-dd-yyyy&quot;)]" />
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_QSRSoft]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="634,9696" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="602,61" sap2010:WorkflowViewState.IdRef="WriteLine_13" Text="[&quot;MA Postpone: &quot;+ MassPostponeDate.ToString(&quot;MM-dd-yyyy&quot;)]" />
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_QSRSoft]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="602,4021" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Assign Variables from Sign Up Tracker" sap:VirtualizedContainerService.HintSize="600,9576" sap2010:WorkflowViewState.IdRef="Sequence_17">
+          <Sequence DisplayName="Assign Variables from Sign Up Tracker" sap:VirtualizedContainerService.HintSize="568,3901" sap2010:WorkflowViewState.IdRef="Sequence_17">
             <Sequence.Variables>
               <Variable x:TypeArguments="s:String[]" Name="Array" />
             </Sequence.Variables>
@@ -258,7 +258,7 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="558,191" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="526,191" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
               <ui:MultipleAssign.AssignOperations>
                 <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_14">
@@ -296,7 +296,7 @@
                 </scg:List>
               </ui:MultipleAssign.AssignOperations>
             </ui:MultipleAssign>
-            <ui:MultipleAssign sap2010:Annotation.AnnotationText="Subfolder where files are to be dropped off. Query = Month folder. RequestworkBook for updating status.&#xA;" DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="558,217" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
+            <ui:MultipleAssign sap2010:Annotation.AnnotationText="Subfolder where files are to be dropped off. Query = Month folder. RequestworkBook for updating status.&#xA;" DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="526,217" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
               <ui:MultipleAssign.AssignOperations>
                 <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_28">
@@ -333,14 +333,14 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:MultipleAssign>
-            <Sequence sap:VirtualizedContainerService.HintSize="558,8061" sap2010:WorkflowViewState.IdRef="Sequence_30">
+            <Sequence sap:VirtualizedContainerService.HintSize="526,3130" sap2010:WorkflowViewState.IdRef="Sequence_30">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Assign sap:VirtualizedContainerService.HintSize="516,60" sap2010:WorkflowViewState.IdRef="Assign_57">
+              <Assign sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_57">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[cashSheet]</OutArgument>
                 </Assign.To>
@@ -348,7 +348,7 @@
                   <InArgument x:TypeArguments="x:String">[row.item(5).ToString]</InArgument>
                 </Assign.Value>
               </Assign>
-              <If Condition="[CashSheet = &quot;Y&quot; or CashSheet = &quot;y&quot;]" DisplayName="Cash Sheet" sap:VirtualizedContainerService.HintSize="516,681" sap2010:WorkflowViewState.IdRef="If_5">
+              <If Condition="[CashSheet = &quot;Y&quot; or CashSheet = &quot;y&quot;]" DisplayName="Cash Sheet" sap:VirtualizedContainerService.HintSize="484,681" sap2010:WorkflowViewState.IdRef="If_5">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -388,51 +388,25 @@
                     </Assign>
                     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Add Que Item workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="QSRSoft Add Que Item.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_QueueName">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="QueueName" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_ReportName">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ReportName" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_ClientName">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ClientName" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_ClientNum">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ClientNum" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="s:DateTime" x:Key="in_PostponeDate">
-                          <mva:VisualBasicValue x:TypeArguments="s:DateTime" ExpressionText="PostponeDate" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_StartDate">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="StartDateString" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_EndDate">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="EndDateString" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_Priority">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Priority" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="s:DateTime" x:Key="in_Deadline">
-                          <mva:VisualBasicValue x:TypeArguments="s:DateTime" ExpressionText="Deadline" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_FirmID">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="FirmID" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_Subfolder">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Subfolder" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_Query">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Query" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_RequestWorkbookName">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="RequestWorkbookName" />
-                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_QueueName">[QueueName]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_ReportName">[ReportName]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_ClientName">[ClientName]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_ClientNum">[ClientNum]</InArgument>
+                        <InArgument x:TypeArguments="s:DateTime" x:Key="in_PostponeDate">[PostponeDate]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_StartDate">[StartDateString]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_EndDate">[EndDateString]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_Priority">[Priority]</InArgument>
+                        <InArgument x:TypeArguments="s:DateTime" x:Key="in_Deadline">[Deadline]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_FirmID">[FirmID]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_Subfolder">[Subfolder]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_Query">[Query]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_RequestWorkbookName">[RequestWorkbookName]</InArgument>
                       </ui:InvokeWorkflowFile.Arguments>
                     </ui:InvokeWorkflowFile>
                   </Sequence>
                 </If.Then>
               </If>
-              <Assign sap:VirtualizedContainerService.HintSize="516,60" sap2010:WorkflowViewState.IdRef="Assign_100">
+              <Assign sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_100">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[cashSheetMA]</OutArgument>
                 </Assign.To>
@@ -440,10 +414,10 @@
                   <InArgument x:TypeArguments="x:String">[row.item(6).ToString]</InArgument>
                 </Assign.Value>
               </Assign>
-              <If Condition="[CashSheetMA = &quot;Y&quot; or CashSheet = &quot;y&quot;]" DisplayName="Cash Sheet Mass" sap:VirtualizedContainerService.HintSize="516,782" sap2010:WorkflowViewState.IdRef="If_9">
+              <If Condition="[CashSheetMA = &quot;Y&quot; or CashSheet = &quot;y&quot;]" DisplayName="Cash Sheet Mass" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="If_9">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
@@ -481,51 +455,25 @@
                     <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_11" Text="[&quot;MA QSRSoft End Date: &quot;+EndDateString]" />
                     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Add Que Item workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_21" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="QSRSoft Add Que Item.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_QueueName">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="QueueName" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_ReportName">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ReportName" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_ClientName">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ClientName" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_ClientNum">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ClientNum" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="s:DateTime" x:Key="in_PostponeDate">
-                          <mva:VisualBasicValue x:TypeArguments="s:DateTime" ExpressionText="MassPostponeDate" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_StartDate">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="StartDateString" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_EndDate">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="EndDateString" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_Priority">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Priority" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="s:DateTime" x:Key="in_Deadline">
-                          <mva:VisualBasicValue x:TypeArguments="s:DateTime" ExpressionText="Deadline" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_FirmID">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="FirmID" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_Subfolder">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Subfolder" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_Query">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Query" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_RequestWorkbookName">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="RequestWorkbookName" />
-                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_QueueName">[QueueName]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_ReportName">[ReportName]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_ClientName">[ClientName]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_ClientNum">[ClientNum]</InArgument>
+                        <InArgument x:TypeArguments="s:DateTime" x:Key="in_PostponeDate">[MassPostponeDate]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_StartDate">[StartDateString]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_EndDate">[EndDateString]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_Priority">[Priority]</InArgument>
+                        <InArgument x:TypeArguments="s:DateTime" x:Key="in_Deadline">[Deadline]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_FirmID">[FirmID]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_Subfolder">[Subfolder]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_Query">[Query]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_RequestWorkbookName">[RequestWorkbookName]</InArgument>
                       </ui:InvokeWorkflowFile.Arguments>
                     </ui:InvokeWorkflowFile>
                   </Sequence>
                 </If.Then>
               </If>
-              <Assign sap:VirtualizedContainerService.HintSize="516,60" sap2010:WorkflowViewState.IdRef="Assign_58">
+              <Assign sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_58">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[cashless]</OutArgument>
                 </Assign.To>
@@ -533,10 +481,10 @@
                   <InArgument x:TypeArguments="x:String">[row.item(4).ToString]</InArgument>
                 </Assign.Value>
               </Assign>
-              <If Condition="[Cashless = &quot;Y&quot; or Cashless = &quot;y&quot;]" DisplayName="Cashless" sap:VirtualizedContainerService.HintSize="516,681" sap2010:WorkflowViewState.IdRef="If_5">
+              <If Condition="[Cashless = &quot;Y&quot; or Cashless = &quot;y&quot;]" DisplayName="Cashless" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="If_5">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
@@ -576,51 +524,25 @@
                     </Assign>
                     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Add Que Item workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="QSRSoft Add Que Item.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_QueueName">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="QueueName" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_ReportName">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ReportName" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_ClientName">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ClientName" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_ClientNum">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ClientNum" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="s:DateTime" x:Key="in_PostponeDate">
-                          <mva:VisualBasicValue x:TypeArguments="s:DateTime" ExpressionText="PostponeDate" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_StartDate">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="StartDateString" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_EndDate">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="EndDateString" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_Priority">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Priority" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="s:DateTime" x:Key="in_Deadline">
-                          <mva:VisualBasicValue x:TypeArguments="s:DateTime" ExpressionText="Deadline" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_FirmID">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="FirmID" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_Subfolder">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Subfolder" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_Query">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Query" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_RequestWorkbookName">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="RequestWorkbookName" />
-                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_QueueName">[QueueName]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_ReportName">[ReportName]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_ClientName">[ClientName]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_ClientNum">[ClientNum]</InArgument>
+                        <InArgument x:TypeArguments="s:DateTime" x:Key="in_PostponeDate">[PostponeDate]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_StartDate">[StartDateString]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_EndDate">[EndDateString]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_Priority">[Priority]</InArgument>
+                        <InArgument x:TypeArguments="s:DateTime" x:Key="in_Deadline">[Deadline]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_FirmID">[FirmID]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_Subfolder">[Subfolder]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_Query">[Query]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_RequestWorkbookName">[RequestWorkbookName]</InArgument>
                       </ui:InvokeWorkflowFile.Arguments>
                     </ui:InvokeWorkflowFile>
                   </Sequence>
                 </If.Then>
               </If>
-              <Assign sap:VirtualizedContainerService.HintSize="516,60" sap2010:WorkflowViewState.IdRef="Assign_59">
+              <Assign sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_59">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[contFoodCost]</OutArgument>
                 </Assign.To>
@@ -628,10 +550,10 @@
                   <InArgument x:TypeArguments="x:String">[row.item(7).ToString]</InArgument>
                 </Assign.Value>
               </Assign>
-              <If Condition="[ContFoodCost = &quot;Y&quot; or ContFoodCost = &quot;y&quot;]" DisplayName="Cont Food Cost" sap:VirtualizedContainerService.HintSize="516,681" sap2010:WorkflowViewState.IdRef="If_5">
+              <If Condition="[ContFoodCost = &quot;Y&quot; or ContFoodCost = &quot;y&quot;]" DisplayName="Cont Food Cost" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="If_5">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
@@ -673,51 +595,25 @@
                     </Assign>
                     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Add Que Item workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="QSRSoft Add Que Item.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_QueueName">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="QueueName" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_ReportName">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ReportName" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_ClientName">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ClientName" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_ClientNum">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ClientNum" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="s:DateTime" x:Key="in_PostponeDate">
-                          <mva:VisualBasicValue x:TypeArguments="s:DateTime" ExpressionText="PostponeDate" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_StartDate">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="StartDateString" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_EndDate">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="EndDateString" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_Priority">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Priority" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="s:DateTime" x:Key="in_Deadline">
-                          <mva:VisualBasicValue x:TypeArguments="s:DateTime" ExpressionText="Deadline" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_FirmID">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="FirmID" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_Subfolder">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Subfolder" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_Query">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Query" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_RequestWorkbookName">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="RequestWorkbookName" />
-                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_QueueName">[QueueName]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_ReportName">[ReportName]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_ClientName">[ClientName]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_ClientNum">[ClientNum]</InArgument>
+                        <InArgument x:TypeArguments="s:DateTime" x:Key="in_PostponeDate">[PostponeDate]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_StartDate">[StartDateString]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_EndDate">[EndDateString]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_Priority">[Priority]</InArgument>
+                        <InArgument x:TypeArguments="s:DateTime" x:Key="in_Deadline">[Deadline]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_FirmID">[FirmID]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_Subfolder">[Subfolder]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_Query">[Query]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_RequestWorkbookName">[RequestWorkbookName]</InArgument>
                       </ui:InvokeWorkflowFile.Arguments>
                     </ui:InvokeWorkflowFile>
                   </Sequence>
                 </If.Then>
               </If>
-              <Assign sap:VirtualizedContainerService.HintSize="516,60" sap2010:WorkflowViewState.IdRef="Assign_60">
+              <Assign sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_60">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[DeliveryByVendor]</OutArgument>
                 </Assign.To>
@@ -725,10 +621,10 @@
                   <InArgument x:TypeArguments="x:String">[row.item(8).ToString]</InArgument>
                 </Assign.Value>
               </Assign>
-              <If Condition="[DeliveryByVendor = &quot;Y&quot; or DeliveryByVendor = &quot;y&quot;]" DisplayName="Delivery" sap:VirtualizedContainerService.HintSize="516,681" sap2010:WorkflowViewState.IdRef="If_5">
+              <If Condition="[DeliveryByVendor = &quot;Y&quot; or DeliveryByVendor = &quot;y&quot;]" DisplayName="Delivery" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="If_5">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
@@ -769,51 +665,25 @@
                     </Assign>
                     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Add Que Item workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_15" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="QSRSoft Add Que Item.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_QueueName">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="QueueName" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_ReportName">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ReportName" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_ClientName">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ClientName" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_ClientNum">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ClientNum" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="s:DateTime" x:Key="in_PostponeDate">
-                          <mva:VisualBasicValue x:TypeArguments="s:DateTime" ExpressionText="PostponeDate" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_StartDate">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="StartDateString" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_EndDate">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="EndDateString" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_Priority">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Priority" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="s:DateTime" x:Key="in_Deadline">
-                          <mva:VisualBasicValue x:TypeArguments="s:DateTime" ExpressionText="Deadline" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_FirmID">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="FirmID" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_Subfolder">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Subfolder" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_Query">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Query" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_RequestWorkbookName">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="RequestWorkbookName" />
-                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_QueueName">[QueueName]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_ReportName">[ReportName]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_ClientName">[ClientName]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_ClientNum">[ClientNum]</InArgument>
+                        <InArgument x:TypeArguments="s:DateTime" x:Key="in_PostponeDate">[PostponeDate]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_StartDate">[StartDateString]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_EndDate">[EndDateString]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_Priority">[Priority]</InArgument>
+                        <InArgument x:TypeArguments="s:DateTime" x:Key="in_Deadline">[Deadline]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_FirmID">[FirmID]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_Subfolder">[Subfolder]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_Query">[Query]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_RequestWorkbookName">[RequestWorkbookName]</InArgument>
                       </ui:InvokeWorkflowFile.Arguments>
                     </ui:InvokeWorkflowFile>
                   </Sequence>
                 </If.Then>
               </If>
-              <Assign sap:VirtualizedContainerService.HintSize="516,60" sap2010:WorkflowViewState.IdRef="Assign_61">
+              <Assign sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_61">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[Deposits]</OutArgument>
                 </Assign.To>
@@ -821,7 +691,7 @@
                   <InArgument x:TypeArguments="x:String">[row.item(9).ToString]</InArgument>
                 </Assign.Value>
               </Assign>
-              <If Condition="[Deposits = &quot;Y&quot; or Deposits = &quot;y&quot;]" DisplayName="Deposits" sap:VirtualizedContainerService.HintSize="516,681" sap2010:WorkflowViewState.IdRef="If_5">
+              <If Condition="[Deposits = &quot;Y&quot; or Deposits = &quot;y&quot;]" DisplayName="Deposits" sap:VirtualizedContainerService.HintSize="484,681" sap2010:WorkflowViewState.IdRef="If_5">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -864,51 +734,25 @@
                     </Assign>
                     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Add Que Item workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_16" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="QSRSoft Add Que Item.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_QueueName">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="QueueName" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_ReportName">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ReportName" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_ClientName">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ClientName" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_ClientNum">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ClientNum" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="s:DateTime" x:Key="in_PostponeDate">
-                          <mva:VisualBasicValue x:TypeArguments="s:DateTime" ExpressionText="PostponeDate" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_StartDate">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="StartDateString" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_EndDate">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="EndDateString" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_Priority">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Priority" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="s:DateTime" x:Key="in_Deadline">
-                          <mva:VisualBasicValue x:TypeArguments="s:DateTime" ExpressionText="Deadline" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_FirmID">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="FirmID" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_Subfolder">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Subfolder" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_Query">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Query" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_RequestWorkbookName">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="RequestWorkbookName" />
-                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_QueueName">[QueueName]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_ReportName">[ReportName]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_ClientName">[ClientName]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_ClientNum">[ClientNum]</InArgument>
+                        <InArgument x:TypeArguments="s:DateTime" x:Key="in_PostponeDate">[PostponeDate]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_StartDate">[StartDateString]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_EndDate">[EndDateString]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_Priority">[Priority]</InArgument>
+                        <InArgument x:TypeArguments="s:DateTime" x:Key="in_Deadline">[Deadline]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_FirmID">[FirmID]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_Subfolder">[Subfolder]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_Query">[Query]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_RequestWorkbookName">[RequestWorkbookName]</InArgument>
                       </ui:InvokeWorkflowFile.Arguments>
                     </ui:InvokeWorkflowFile>
                   </Sequence>
                 </If.Then>
               </If>
-              <Assign sap:VirtualizedContainerService.HintSize="516,60" sap2010:WorkflowViewState.IdRef="Assign_63">
+              <Assign sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_63">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[Labor]</OutArgument>
                 </Assign.To>
@@ -916,10 +760,10 @@
                   <InArgument x:TypeArguments="x:String">[row.item(12).ToString]</InArgument>
                 </Assign.Value>
               </Assign>
-              <If Condition="[Labor = &quot;Y&quot; or Labor = &quot;y&quot;]" DisplayName="Labor" sap:VirtualizedContainerService.HintSize="516,681" sap2010:WorkflowViewState.IdRef="If_5">
+              <If Condition="[Labor = &quot;Y&quot; or Labor = &quot;y&quot;]" DisplayName="Labor" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="If_5">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
@@ -959,51 +803,25 @@
                     </Assign>
                     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Add Que Item workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_17" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="QSRSoft Add Que Item.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_QueueName">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="QueueName" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_ReportName">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ReportName" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_ClientName">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ClientName" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_ClientNum">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ClientNum" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="s:DateTime" x:Key="in_PostponeDate">
-                          <mva:VisualBasicValue x:TypeArguments="s:DateTime" ExpressionText="PostponeDate" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_StartDate">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="StartDateString" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_EndDate">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="EndDateString" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_Priority">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Priority" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="s:DateTime" x:Key="in_Deadline">
-                          <mva:VisualBasicValue x:TypeArguments="s:DateTime" ExpressionText="Deadline" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_FirmID">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="FirmID" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_Subfolder">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Subfolder" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_Query">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Query" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_RequestWorkbookName">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="RequestWorkbookName" />
-                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_QueueName">[QueueName]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_ReportName">[ReportName]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_ClientName">[ClientName]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_ClientNum">[ClientNum]</InArgument>
+                        <InArgument x:TypeArguments="s:DateTime" x:Key="in_PostponeDate">[PostponeDate]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_StartDate">[StartDateString]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_EndDate">[EndDateString]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_Priority">[Priority]</InArgument>
+                        <InArgument x:TypeArguments="s:DateTime" x:Key="in_Deadline">[Deadline]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_FirmID">[FirmID]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_Subfolder">[Subfolder]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_Query">[Query]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_RequestWorkbookName">[RequestWorkbookName]</InArgument>
                       </ui:InvokeWorkflowFile.Arguments>
                     </ui:InvokeWorkflowFile>
                   </Sequence>
                 </If.Then>
               </If>
-              <Assign sap:VirtualizedContainerService.HintSize="516,60" sap2010:WorkflowViewState.IdRef="Assign_65">
+              <Assign sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_65">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[storeTransfers]</OutArgument>
                 </Assign.To>
@@ -1011,10 +829,10 @@
                   <InArgument x:TypeArguments="x:String">[row.item(11).ToString]</InArgument>
                 </Assign.Value>
               </Assign>
-              <If Condition="[StoreTransfers = &quot;Y&quot; or StoreTransfers = &quot;y&quot;]" DisplayName="Store Transfers" sap:VirtualizedContainerService.HintSize="516,681" sap2010:WorkflowViewState.IdRef="If_5">
+              <If Condition="[StoreTransfers = &quot;Y&quot; or StoreTransfers = &quot;y&quot;]" DisplayName="Store Transfers" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="If_5">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
@@ -1051,51 +869,25 @@
                     </Assign>
                     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Add Que Item workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="QSRSoft Add Que Item.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_QueueName">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="QueueName" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_ReportName">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ReportName" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_ClientName">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ClientName" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_ClientNum">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ClientNum" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="s:DateTime" x:Key="in_PostponeDate">
-                          <mva:VisualBasicValue x:TypeArguments="s:DateTime" ExpressionText="PostponeDate" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_StartDate">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="StartDateString" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_EndDate">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="EndDateString" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_Priority">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Priority" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="s:DateTime" x:Key="in_Deadline">
-                          <mva:VisualBasicValue x:TypeArguments="s:DateTime" ExpressionText="Deadline" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_FirmID">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="FirmID" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_Subfolder">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Subfolder" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_Query">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Query" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_RequestWorkbookName">
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="RequestWorkbookName" />
-                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_QueueName">[QueueName]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_ReportName">[ReportName]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_ClientName">[ClientName]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_ClientNum">[ClientNum]</InArgument>
+                        <InArgument x:TypeArguments="s:DateTime" x:Key="in_PostponeDate">[PostponeDate]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_StartDate">[StartDateString]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_EndDate">[EndDateString]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_Priority">[Priority]</InArgument>
+                        <InArgument x:TypeArguments="s:DateTime" x:Key="in_Deadline">[Deadline]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_FirmID">[FirmID]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_Subfolder">[Subfolder]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_Query">[Query]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_RequestWorkbookName">[RequestWorkbookName]</InArgument>
                       </ui:InvokeWorkflowFile.Arguments>
                     </ui:InvokeWorkflowFile>
                   </Sequence>
                 </If.Then>
               </If>
-              <Assign sap:VirtualizedContainerService.HintSize="516,60" sap2010:WorkflowViewState.IdRef="Assign_96">
+              <Assign sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_96">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[AccruedLabor]</OutArgument>
                 </Assign.To>
@@ -1103,11 +895,11 @@
                   <InArgument x:TypeArguments="x:String">[row.item(13).ToString]</InArgument>
                 </Assign.Value>
               </Assign>
-              <ui:IsMatch BuilderPattern="\d+\/\d+\/\d+" DisplayName="Is Match" sap:VirtualizedContainerService.HintSize="516,59" sap2010:WorkflowViewState.IdRef="IsMatch_2" Input="[AccruedLabor]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;\\d+\\\/\\d+\\\/\\d+&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="\d+\/\d+\/\d+" RegexOption="IgnoreCase" Result="[AccruedLaborExists]" />
-              <If Condition="[AccruedLaborExists = True]" sap:VirtualizedContainerService.HintSize="516,1101" sap2010:WorkflowViewState.IdRef="If_8">
+              <ui:IsMatch BuilderPattern="\d+\/\d+\/\d+" DisplayName="Is Match" sap:VirtualizedContainerService.HintSize="484,59" sap2010:WorkflowViewState.IdRef="IsMatch_2" Input="[AccruedLabor]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;\\d+\\\/\\d+\\\/\\d+&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="\d+\/\d+\/\d+" RegexOption="IgnoreCase" Result="[AccruedLaborExists]" />
+              <If Condition="[AccruedLaborExists = True]" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="If_8">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
@@ -1153,45 +945,19 @@
                           </Assign>
                           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Add Que Item workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_20" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="QSRSoft Add Que Item.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_QueueName">
-                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="QueueName" />
-                              </InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_ReportName">
-                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ReportName" />
-                              </InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_ClientName">
-                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ClientName" />
-                              </InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_ClientNum">
-                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ClientNum" />
-                              </InArgument>
-                              <InArgument x:TypeArguments="s:DateTime" x:Key="in_PostponeDate">
-                                <mva:VisualBasicValue x:TypeArguments="s:DateTime" ExpressionText="PostponeDate" />
-                              </InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_StartDate">
-                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="StartDateString" />
-                              </InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_EndDate">
-                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="EndDateString" />
-                              </InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_Priority">
-                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Priority" />
-                              </InArgument>
-                              <InArgument x:TypeArguments="s:DateTime" x:Key="in_Deadline">
-                                <mva:VisualBasicValue x:TypeArguments="s:DateTime" ExpressionText="Deadline" />
-                              </InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_FirmID">
-                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="FirmID" />
-                              </InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_Subfolder">
-                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Subfolder" />
-                              </InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_Query">
-                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Query" />
-                              </InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_RequestWorkbookName">
-                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="RequestWorkbookName" />
-                              </InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_QueueName">[QueueName]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_ReportName">[ReportName]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_ClientName">[ClientName]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_ClientNum">[ClientNum]</InArgument>
+                              <InArgument x:TypeArguments="s:DateTime" x:Key="in_PostponeDate">[PostponeDate]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_StartDate">[StartDateString]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_EndDate">[EndDateString]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_Priority">[Priority]</InArgument>
+                              <InArgument x:TypeArguments="s:DateTime" x:Key="in_Deadline">[Deadline]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_FirmID">[FirmID]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_Subfolder">[Subfolder]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_Query">[Query]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_RequestWorkbookName">[RequestWorkbookName]</InArgument>
                             </ui:InvokeWorkflowFile.Arguments>
                           </ui:InvokeWorkflowFile>
                         </Sequence>
@@ -1217,7 +983,7 @@
                 </If.Then>
               </If>
             </Sequence>
-            <Assign sap:VirtualizedContainerService.HintSize="558,60" sap2010:WorkflowViewState.IdRef="Assign_66">
+            <Assign sap:VirtualizedContainerService.HintSize="526,60" sap2010:WorkflowViewState.IdRef="Assign_66">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[EndInv]</OutArgument>
               </Assign.To>
@@ -1225,10 +991,10 @@
                 <InArgument x:TypeArguments="x:String">[row.item(10).ToString]</InArgument>
               </Assign.Value>
             </Assign>
-            <If Condition="[EndInv = &quot;Y&quot; or EndInv = &quot;y&quot;]" sap:VirtualizedContainerService.HintSize="558,795" sap2010:WorkflowViewState.IdRef="If_6">
+            <If Condition="[EndInv = &quot;Y&quot; or EndInv = &quot;y&quot;]" sap:VirtualizedContainerService.HintSize="526,51" sap2010:WorkflowViewState.IdRef="If_6">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
@@ -1266,45 +1032,19 @@
                   </Assign>
                   <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Add Que Item workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_18" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="QSRSoft Add Que Item.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_QueueName">
-                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="QueueName" />
-                      </InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_ReportName">
-                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ReportName" />
-                      </InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_ClientName">
-                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ClientName" />
-                      </InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_ClientNum">
-                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ClientNum" />
-                      </InArgument>
-                      <InArgument x:TypeArguments="s:DateTime" x:Key="in_PostponeDate">
-                        <mva:VisualBasicValue x:TypeArguments="s:DateTime" ExpressionText="EndingInvPostponeDate" />
-                      </InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_StartDate">
-                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="StartDateString" />
-                      </InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_EndDate">
-                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="EndDateString" />
-                      </InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_Priority">
-                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Priority" />
-                      </InArgument>
-                      <InArgument x:TypeArguments="s:DateTime" x:Key="in_Deadline">
-                        <mva:VisualBasicValue x:TypeArguments="s:DateTime" ExpressionText="EndingInvDeadline" />
-                      </InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_FirmID">
-                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="FirmID" />
-                      </InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_Subfolder">
-                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Subfolder" />
-                      </InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_Query">
-                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Query" />
-                      </InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_RequestWorkbookName">
-                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="RequestWorkbookName" />
-                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_QueueName">[QueueName]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_ReportName">[ReportName]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_ClientName">[ClientName]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_ClientNum">[ClientNum]</InArgument>
+                      <InArgument x:TypeArguments="s:DateTime" x:Key="in_PostponeDate">[EndingInvPostponeDate]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_StartDate">[StartDateString]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_EndDate">[EndDateString]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_Priority">[Priority]</InArgument>
+                      <InArgument x:TypeArguments="s:DateTime" x:Key="in_Deadline">[EndingInvDeadline]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_FirmID">[FirmID]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_Subfolder">[Subfolder]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_Query">[Query]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_RequestWorkbookName">[RequestWorkbookName]</InArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
                 </Sequence>

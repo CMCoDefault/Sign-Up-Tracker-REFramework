@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>823.2,3935.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1073,3900</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Add_Items_to_Que_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="44">
@@ -98,10 +98,9 @@
       <AssemblyReference>Microsoft.Graph</AssemblyReference>
       <AssemblyReference>UiPath.MicrosoftOffice365</AssemblyReference>
       <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Dispatcher" sap:VirtualizedContainerService.HintSize="833.6,3870.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Dispatcher" sap:VirtualizedContainerService.HintSize="838,3835" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_ClientNum" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_SheetName" />
@@ -125,7 +124,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign sap:VirtualizedContainerService.HintSize="792,60" sap2010:WorkflowViewState.IdRef="Assign_8">
+    <Assign sap:VirtualizedContainerService.HintSize="796,60" sap2010:WorkflowViewState.IdRef="Assign_8">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[SharePointSite]</OutArgument>
       </Assign.To>
@@ -133,7 +132,7 @@
         <InArgument x:TypeArguments="x:String">[in_Config("SharePointSite").ToString]</InArgument>
       </Assign.Value>
     </Assign>
-    <Assign sap:VirtualizedContainerService.HintSize="792,60" sap2010:WorkflowViewState.IdRef="Assign_11">
+    <Assign sap:VirtualizedContainerService.HintSize="796,60" sap2010:WorkflowViewState.IdRef="Assign_11">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[QueueName]</OutArgument>
       </Assign.To>
@@ -141,14 +140,14 @@
         <InArgument x:TypeArguments="x:String">[in_Config("ProliantQueueName").ToString]</InArgument>
       </Assign.Value>
     </Assign>
-    <co:Office_365_Assets ApplicationID="[AppID]" ApplicationSecret="[AppSecret]" DisplayName="Office 365 Assets" sap:VirtualizedContainerService.HintSize="792,22.4" sap2010:WorkflowViewState.IdRef="Office_365_Assets_1" Office365SV="[SV]" Tenant="[Tenant]" password="[Password]" username="[Username]" />
-    <uma:Office365ApplicationScope ContinueOnError="{x:Null}" Password="{x:Null}" Timeout="{x:Null}" ApplicationId="[AppID]" ApplicationSecret="[AppSecret]" AuthenticationType="ApplicationIdAndSecret" DisplayName="Microsoft Office 365 Scope" sap:VirtualizedContainerService.HintSize="792,3515.2" sap2010:WorkflowViewState.IdRef="Office365ApplicationScope_1" OAuthApplication="UiPath" SecureApplicationSecret="[SV]" SecurePassword="[password]" Services="Files" Tenant="[Tenant]" Username="[Username]">
+    <co:Office_365_Assets ApplicationID="[AppID]" ApplicationSecret="[AppSecret]" DisplayName="Office 365 Assets" sap:VirtualizedContainerService.HintSize="796,22" sap2010:WorkflowViewState.IdRef="Office_365_Assets_1" Office365SV="[SV]" Tenant="[Tenant]" password="[Password]" username="[Username]" />
+    <uma:Office365ApplicationScope ContinueOnError="{x:Null}" Password="{x:Null}" Timeout="{x:Null}" ApplicationId="[AppID]" ApplicationSecret="[AppSecret]" AuthenticationType="ApplicationIdAndSecret" DisplayName="Microsoft Office 365 Scope" sap:VirtualizedContainerService.HintSize="796,3481" sap2010:WorkflowViewState.IdRef="Office365ApplicationScope_1" OAuthApplication="UiPath" SecureApplicationSecret="[SV]" SecurePassword="[password]" Services="Files" Tenant="[Tenant]" Username="[Username]">
       <uma:Office365ApplicationScope.Body>
         <ActivityAction x:TypeArguments="mg:GraphServiceClient">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="mg:GraphServiceClient" Name="ParentScope" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="758.4,3428.8" sap2010:WorkflowViewState.IdRef="Sequence_12">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="762,3395" sap2010:WorkflowViewState.IdRef="Sequence_12">
             <Sequence.Variables>
               <Variable x:TypeArguments="sd:DataTable" Name="dt_ProliantReports" />
             </Sequence.Variables>
@@ -157,21 +156,21 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <umaf:FindFilesAndFolders DriveName="{x:Null}" Results="{x:Null}" Subfolder="{x:Null}" DisplayName="Find Files And Folders" First="[ProliantWorkbook]" sap:VirtualizedContainerService.HintSize="716.8,85.6" sap2010:WorkflowViewState.IdRef="FindFilesAndFolders_1" Query="[in_Config(&quot;QueryProliant&quot;).ToString]" SiteUrl="[in_ConfigSharePointSite]" />
-            <umae:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_SheetName]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="716.8,183.2" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Queue" ValuesType="Text" Workbook="[ProliantWorkbook]" />
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_SheetName]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="716.8,2987.2" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+            <umaf:FindFilesAndFolders DriveName="{x:Null}" Results="{x:Null}" Subfolder="{x:Null}" DisplayName="Find Files And Folders" First="[ProliantWorkbook]" sap:VirtualizedContainerService.HintSize="720,84" sap2010:WorkflowViewState.IdRef="FindFilesAndFolders_1" Query="[in_Config(&quot;QueryProliant&quot;).ToString]" SiteUrl="[in_ConfigSharePointSite]" />
+            <umae:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_SheetName]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="720,180" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Queue" ValuesType="Text" Workbook="[ProliantWorkbook]" />
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_SheetName]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="720,2959" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                   </ActivityAction.Argument>
-                  <Sequence sap:VirtualizedContainerService.HintSize="683.2,2866.4" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <Sequence sap:VirtualizedContainerService.HintSize="686,2840" sap2010:WorkflowViewState.IdRef="Sequence_8">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="641.6,2773.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="644,2748" sap2010:WorkflowViewState.IdRef="Sequence_6">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:String" Name="SheetName" />
                       </Sequence.Variables>
@@ -181,7 +180,7 @@
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Assign sap:VirtualizedContainerService.HintSize="600,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                      <Assign sap:VirtualizedContainerService.HintSize="602,60" sap2010:WorkflowViewState.IdRef="Assign_2">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:String">[sheetName]</OutArgument>
                         </Assign.To>
@@ -189,9 +188,9 @@
                           <InArgument x:TypeArguments="x:String">[Row.item(0).ToString]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="600,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[SheetName]" />
-                      <umae:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_ClientNum]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="600,183.2" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="[SheetName]" ValuesType="Text" Workbook="[ProliantWorkbook]" />
-                      <ui:FilterDataTable DataTable="[dt_ClientNum]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="600,162.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[dt_ClientNum]" SelectColumnsMode="Keep">
+                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="602,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[SheetName]" />
+                      <umae:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_ClientNum]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="602,180" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="[SheetName]" ValuesType="Text" Workbook="[ProliantWorkbook]" />
+                      <ui:FilterDataTable DataTable="[dt_ClientNum]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="602,160" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[dt_ClientNum]" SelectColumnsMode="Keep">
                         <ui:FilterDataTable.Filters>
                           <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
                             <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
@@ -210,13 +209,13 @@
                           </scg:List>
                         </ui:FilterDataTable.SelectColumns>
                       </ui:FilterDataTable>
-                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_ClientNum]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="600,1990.4" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_ClientNum]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="602,1973" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                         <ui:ForEachRow.Body>
                           <ActivityAction x:TypeArguments="sd:DataRow">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="566.4,1869.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="568,1854" sap2010:WorkflowViewState.IdRef="Sequence_2">
                               <Sequence.Variables>
                                 <Variable x:TypeArguments="x:String" Name="ClientNum" />
                                 <Variable x:TypeArguments="x:String" Name="EndDate" />
@@ -343,7 +342,7 @@
                                   </scg:List>
                                 </ui:MultipleAssign.AssignOperations>
                               </ui:MultipleAssign>
-                              <Sequence DisplayName="FirmID Validation " sap:VirtualizedContainerService.HintSize="524.8,412" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                              <Sequence DisplayName="FirmID Validation " sap:VirtualizedContainerService.HintSize="526,409" sap2010:WorkflowViewState.IdRef="Sequence_11">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -351,13 +350,13 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                                 <ui:IsMatch BuilderPattern="\d{10}" DisplayName="Is Match" sap:VirtualizedContainerService.HintSize="483.2,60" sap2010:WorkflowViewState.IdRef="IsMatch_1" Input="[FirmID]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;\\d{10}&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="\d{10}" RegexOption="IgnoreCase" Result="[FirmIdExists]" />
-                                <If Condition="[FirmIdExists]" sap:VirtualizedContainerService.HintSize="483.2,219.2" sap2010:WorkflowViewState.IdRef="If_3">
+                                <If Condition="[FirmIdExists]" sap:VirtualizedContainerService.HintSize="484,217" sap2010:WorkflowViewState.IdRef="If_3">
                                   <If.Else>
-                                    <ui:Continue sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="Continue_1" />
+                                    <ui:Continue sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Continue_1" />
                                   </If.Else>
                                 </If>
                               </Sequence>
-                              <ui:MultipleAssign sap2010:Annotation.AnnotationText="Subfolder where files are to be dropped off. Query = Month folder. RequestworkBook for updating status.&#xA;" DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="524.8,221.6" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
+                              <ui:MultipleAssign sap2010:Annotation.AnnotationText="Subfolder where files are to be dropped off. Query = Month folder. RequestworkBook for updating status.&#xA;" DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="526,217" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
                                 <ui:MultipleAssign.AssignOperations>
                                   <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                                     <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_16">
@@ -394,9 +393,9 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:MultipleAssign>
-                              <If Condition="[if(SheetName = &quot;Labor Distribution&quot; or SheetName = &quot;PayrollSummary&quot;,True,False)]" sap:VirtualizedContainerService.HintSize="524.8,239.2" sap2010:WorkflowViewState.IdRef="If_4">
+                              <If Condition="[if(SheetName = &quot;Labor Distribution&quot; or SheetName = &quot;PayrollSummary&quot;,True,False)]" sap:VirtualizedContainerService.HintSize="526,236" sap2010:WorkflowViewState.IdRef="If_4">
                                 <If.Then>
-                                  <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_9">
+                                  <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_9">
                                     <Assign.To>
                                       <OutArgument x:TypeArguments="x:String">[File1]</OutArgument>
                                     </Assign.To>
@@ -406,9 +405,9 @@
                                   </Assign>
                                 </If.Then>
                               </If>
-                              <If Condition="[ProcessName = &quot;Accrued&quot;]" sap:VirtualizedContainerService.HintSize="524.8,239.2" sap2010:WorkflowViewState.IdRef="If_5">
+                              <If Condition="[ProcessName = &quot;Accrued&quot;]" sap:VirtualizedContainerService.HintSize="526,236" sap2010:WorkflowViewState.IdRef="If_5">
                                 <If.Then>
-                                  <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_10">
+                                  <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_10">
                                     <Assign.To>
                                       <OutArgument x:TypeArguments="s:DateTime">[PostponeDate]</OutArgument>
                                     </Assign.To>
@@ -418,48 +417,48 @@
                                   </Assign>
                                 </If.Then>
                               </If>
-                              <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DeferDate="[PostponeDate]" DisplayName="Add Queue Item" sap:VirtualizedContainerService.HintSize="524.8,22.4" sap2010:WorkflowViewState.IdRef="AddQueueItem_2" Priority="Normal" QueueType="[QueueName]" Reference="[clientNum+&quot;_&quot;+reportID+&quot;_&quot;+ProcessName+&quot;_&quot;+now.date.ToString(&quot;MMddyyyy&quot;)]">
+                              <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DeferDate="[PostponeDate]" DisplayName="Add Queue Item" sap:VirtualizedContainerService.HintSize="526,22" sap2010:WorkflowViewState.IdRef="AddQueueItem_2" Priority="Normal" QueueType="[QueueName]" Reference="[clientNum+&quot;_&quot;+reportID+&quot;_&quot;+ProcessName+&quot;_&quot;+now.date.ToString(&quot;MMddyyyy&quot;)]">
                                 <ui:AddQueueItem.ItemInformation>
-                                  <InArgument x:TypeArguments="x:String" x:Key="in_ClientNum">
+                                  <InArgument x:TypeArguments="x:String" x:Key="ClientNum">
                                     <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="clientNum" />
                                   </InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="in_StartDateRangeIn">
+                                  <InArgument x:TypeArguments="x:String" x:Key="StartDateRangeIn">
                                     <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="EndDate" />
                                   </InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="in_EndDateRangeIn">
+                                  <InArgument x:TypeArguments="x:String" x:Key="EndDateRangeIn">
                                     <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="StartDate" />
                                   </InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="in_ReportID">
+                                  <InArgument x:TypeArguments="x:String" x:Key="ReportID">
                                     <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="reportID" />
                                   </InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="in_File1">
+                                  <InArgument x:TypeArguments="x:String" x:Key="File1">
                                     <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="file1" />
                                   </InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="in_Summary">
+                                  <InArgument x:TypeArguments="x:String" x:Key="Summary">
                                     <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="summary" />
                                   </InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="in_ProcessName">
+                                  <InArgument x:TypeArguments="x:String" x:Key="ProcessName">
                                     <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ProcessName" />
                                   </InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="in_urlCID">
+                                  <InArgument x:TypeArguments="x:String" x:Key="urlCID">
                                     <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="urlCID" />
                                   </InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="in_urlReportID">
+                                  <InArgument x:TypeArguments="x:String" x:Key="urlReportID">
                                     <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="urlReportID" />
                                   </InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="in_ReportName">
+                                  <InArgument x:TypeArguments="x:String" x:Key="ReportName">
                                     <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ReportName" />
                                   </InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="in_FirmID">
+                                  <InArgument x:TypeArguments="x:String" x:Key="FirmID">
                                     <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="FirmID" />
                                   </InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="in_RequestWorkbookName">
+                                  <InArgument x:TypeArguments="x:String" x:Key="RequestWorkbookName">
                                     <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="RequestWorkbookName" />
                                   </InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="in_Subfolder">
+                                  <InArgument x:TypeArguments="x:String" x:Key="Subfolder">
                                     <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Subfolder" />
                                   </InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="in_Query">
+                                  <InArgument x:TypeArguments="x:String" x:Key="Query">
                                     <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Query" />
                                   </InArgument>
                                 </ui:AddQueueItem.ItemInformation>
@@ -474,7 +473,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:ForEachRow>
-                      <ui:ClearDataTable DataTable="[dt_ClientNum]" DisplayName="Clear Data Table" sap:VirtualizedContainerService.HintSize="600,22.4" sap2010:WorkflowViewState.IdRef="ClearDataTable_1" />
+                      <ui:ClearDataTable DataTable="[dt_ClientNum]" DisplayName="Clear Data Table" sap:VirtualizedContainerService.HintSize="602,22" sap2010:WorkflowViewState.IdRef="ClearDataTable_1" />
                     </Sequence>
                   </Sequence>
                 </ActivityAction>

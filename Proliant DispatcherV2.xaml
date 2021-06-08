@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1073,3900</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1097,3900</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Add_Items_to_Que_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="44">
@@ -157,7 +157,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <umaf:FindFilesAndFolders DriveName="{x:Null}" Results="{x:Null}" Subfolder="{x:Null}" DisplayName="Find Files And Folders" First="[ProliantWorkbook]" sap:VirtualizedContainerService.HintSize="720,84" sap2010:WorkflowViewState.IdRef="FindFilesAndFolders_1" Query="[in_Config(&quot;QueryProliant&quot;).ToString]" SiteUrl="[in_ConfigSharePointSite]" />
-            <umae:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_SheetName]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="720,180" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Queue" ValuesType="Text" Workbook="[ProliantWorkbook]" />
+            <umae:ReadRange Range="{x:Null}" AddHeaders="False" DataTable="[dt_SheetName]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="720,180" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Queue" ValuesType="Text" Workbook="[ProliantWorkbook]" />
             <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_SheetName]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="720,2959" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
@@ -419,48 +419,20 @@
                               </If>
                               <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DeferDate="[PostponeDate]" DisplayName="Add Queue Item" sap:VirtualizedContainerService.HintSize="526,22" sap2010:WorkflowViewState.IdRef="AddQueueItem_2" Priority="Normal" QueueType="[QueueName]" Reference="[clientNum+&quot;_&quot;+reportID+&quot;_&quot;+ProcessName+&quot;_&quot;+now.date.ToString(&quot;MMddyyyy&quot;)]">
                                 <ui:AddQueueItem.ItemInformation>
-                                  <InArgument x:TypeArguments="x:String" x:Key="ClientNum">
-                                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="clientNum" />
-                                  </InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="StartDateRangeIn">
-                                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="EndDate" />
-                                  </InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="EndDateRangeIn">
-                                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="StartDate" />
-                                  </InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="ReportID">
-                                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="reportID" />
-                                  </InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="File1">
-                                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="file1" />
-                                  </InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="Summary">
-                                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="summary" />
-                                  </InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="ProcessName">
-                                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ProcessName" />
-                                  </InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="urlCID">
-                                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="urlCID" />
-                                  </InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="urlReportID">
-                                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="urlReportID" />
-                                  </InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="ReportName">
-                                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ReportName" />
-                                  </InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="FirmID">
-                                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="FirmID" />
-                                  </InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="RequestWorkbookName">
-                                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="RequestWorkbookName" />
-                                  </InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="Subfolder">
-                                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Subfolder" />
-                                  </InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="Query">
-                                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Query" />
-                                  </InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="ClientNum">[clientNum]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="StartDateRangeIn">[EndDate]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="EndDateRangeIn">[StartDate]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="ReportID">[reportID]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="File1">[file1]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="Summary">[summary]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="ProcessName">[ProcessName]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="urlCID">[urlCID]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="urlReportID">[urlReportID]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="ReportName">[ReportName]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="FirmID">[FirmID]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="RequestWorkbookName">[RequestWorkbookName]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="Subfolder">[Subfolder]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="Query">[Query]</InArgument>
                                 </ui:AddQueueItem.ItemInformation>
                               </ui:AddQueueItem>
                             </Sequence>

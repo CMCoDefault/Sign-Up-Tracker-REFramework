@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1097,3117</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>870,3615</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="48">
@@ -121,7 +121,7 @@
       <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="" sap:VirtualizedContainerService.HintSize="644,3052" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="" sap:VirtualizedContainerService.HintSize="644,3550" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_QSRSoft" />
       <Variable x:TypeArguments="x:String" Name="LocalProjectWorkbookFolderPath" />
@@ -139,7 +139,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap:VirtualizedContainerService.HintSize="602,1901" sap2010:WorkflowViewState.IdRef="Sequence_65">
+    <Sequence sap:VirtualizedContainerService.HintSize="602,2399" sap2010:WorkflowViewState.IdRef="Sequence_65">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="AppID" />
         <Variable x:TypeArguments="x:String" Name="AppSecret" />
@@ -189,13 +189,13 @@
           </scg:List>
         </ui:MultipleAssign.AssignOperations>
       </ui:MultipleAssign>
-      <uma:Office365ApplicationScope ContinueOnError="{x:Null}" Password="{x:Null}" Timeout="{x:Null}" ApplicationId="[AppID]" ApplicationSecret="[AppSecret]" AuthenticationType="ApplicationIdAndSecret" DisplayName="Microsoft Office 365 Scope" sap:VirtualizedContainerService.HintSize="560,1478" sap2010:WorkflowViewState.IdRef="Office365ApplicationScope_1" OAuthApplication="UiPath" SecureApplicationSecret="[SV]" SecurePassword="[password]" Services="Files" Tenant="[Tenant]" Username="[username]">
+      <uma:Office365ApplicationScope ContinueOnError="{x:Null}" Password="{x:Null}" Timeout="{x:Null}" ApplicationId="[AppID]" ApplicationSecret="[AppSecret]" AuthenticationType="ApplicationIdAndSecret" DisplayName="Microsoft Office 365 Scope" sap:VirtualizedContainerService.HintSize="560,1976" sap2010:WorkflowViewState.IdRef="Office365ApplicationScope_1" OAuthApplication="UiPath" SecureApplicationSecret="[SV]" SecurePassword="[password]" Services="Files" Tenant="[Tenant]" Username="[username]">
         <uma:Office365ApplicationScope.Body>
           <ActivityAction x:TypeArguments="mg:GraphServiceClient">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="mg:GraphServiceClient" Name="ParentScope" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="526,1392" sap2010:WorkflowViewState.IdRef="Sequence_64">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="526,1890" sap2010:WorkflowViewState.IdRef="Sequence_64">
               <Sequence.Variables>
                 <Variable x:TypeArguments="mg:DriveItem" Name="AllianceWorkbook" />
               </Sequence.Variables>
@@ -205,10 +205,10 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <umaf:FindFilesAndFolders DriveName="{x:Null}" Results="{x:Null}" DisplayName="Find Files And Folders" First="[SignUpTracker]" sap:VirtualizedContainerService.HintSize="484,84" sap2010:WorkflowViewState.IdRef="FindFilesAndFolders_1" Query="[RequestWorkbookName]" SiteUrl="[SharePointSite]" Subfolder="[RequestSubfolder]" />
-              <If Condition="[in_Config(&quot;RunQSRSoft&quot;).ToString = &quot;Y&quot;]" DisplayName="QSRSoft" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="If_1">
+              <If Condition="[in_Config(&quot;RunQSRSoft&quot;).ToString = &quot;Y&quot;]" DisplayName="QSRSoft" sap:VirtualizedContainerService.HintSize="484,549" sap2010:WorkflowViewState.IdRef="If_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
@@ -221,7 +221,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="QSRSoft" />
-                    <umae:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_QSRSoft]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,180" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="QSRSoft" ValuesType="Text" Workbook="[SignUpTracker]" />
+                    <umae:ReadRange AddHeaders="True" DataTable="[dt_QSRSoft]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,180" sap2010:WorkflowViewState.IdRef="ReadRange_1" Range="A1:O300" SheetName="QSRSoft" ValuesType="Text" Workbook="[SignUpTracker]" />
                   </Sequence>
                 </If.Then>
               </If>

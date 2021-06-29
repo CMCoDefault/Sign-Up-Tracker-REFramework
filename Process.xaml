@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>870,4457</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1202,4457</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="48">
@@ -264,7 +264,7 @@
                     </sap:WorkflowViewStateService.ViewState>
                     <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="Proliant" />
                     <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[SignUpTracker.name.ToString]" />
-                    <umae:ReadRange AddHeaders="True" DataTable="[dt_Proliant]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,180" sap2010:WorkflowViewState.IdRef="ReadRange_3" Range="A1:L400" SheetName="Proliant" ValuesType="Text" Workbook="[SignUpTracker]">
+                    <umae:ReadRange AddHeaders="True" DataTable="[dt_Proliant]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,180" sap2010:WorkflowViewState.IdRef="ReadRange_3" Range="A1:M400" SheetName="Proliant" ValuesType="Text" Workbook="[SignUpTracker]">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>

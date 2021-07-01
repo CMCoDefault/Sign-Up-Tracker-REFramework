@@ -9,7 +9,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>911,10495</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1007,5230</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Add_Items_to_Que_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="38">
@@ -54,7 +54,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="37">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="74">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -92,9 +92,10 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>UiPath.CV</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Dispatcher" sap:VirtualizedContainerService.HintSize="676,10430" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Dispatcher" sap:VirtualizedContainerService.HintSize="680,5165" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="UserProfile" />
       <Variable x:TypeArguments="x:String" Name="ProjectWorkbook" />
@@ -141,8 +142,8 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <clf:Assign_User_Profile DisplayName="Assign User Profile" sap:VirtualizedContainerService.HintSize="634,22" sap2010:WorkflowViewState.IdRef="Assign_User_Profile_2" argumentUserProfile="[UserProfile]" />
-    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="634,439" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <clf:Assign_User_Profile DisplayName="Assign User Profile" sap:VirtualizedContainerService.HintSize="638,22" sap2010:WorkflowViewState.IdRef="Assign_User_Profile_2" argumentUserProfile="[UserProfile]" />
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="638,439" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -250,14 +251,14 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:MultipleAssign>
-    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="634,61" sap2010:WorkflowViewState.IdRef="WriteLine_13" Text="[&quot;MA Postpone: &quot;+ MassPostponeDate.ToString(&quot;MM-dd-yyyy&quot;)]" />
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_QSRSoft]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="634,9696" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="638,61" sap2010:WorkflowViewState.IdRef="WriteLine_13" Text="[&quot;MA Postpone: &quot;+ MassPostponeDate.ToString(&quot;MM-dd-yyyy&quot;)]" />
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_QSRSoft]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="638,4431" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Assign Variables from Sign Up Tracker" sap:VirtualizedContainerService.HintSize="600,9576" sap2010:WorkflowViewState.IdRef="Sequence_17">
+          <Sequence DisplayName="Assign Variables from Sign Up Tracker" sap:VirtualizedContainerService.HintSize="604,4311" sap2010:WorkflowViewState.IdRef="Sequence_17">
             <Sequence.Variables>
               <Variable x:TypeArguments="s:String[]" Name="Array" />
             </Sequence.Variables>
@@ -267,7 +268,7 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="558,191" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="562,191" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
               <ui:MultipleAssign.AssignOperations>
                 <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_14">
@@ -305,7 +306,7 @@
                 </scg:List>
               </ui:MultipleAssign.AssignOperations>
             </ui:MultipleAssign>
-            <ui:MultipleAssign sap2010:Annotation.AnnotationText="Subfolder where files are to be dropped off. Query = Month folder. RequestworkBook for updating status.&#xA;" DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="558,217" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
+            <ui:MultipleAssign sap2010:Annotation.AnnotationText="Subfolder where files are to be dropped off. Query = Month folder. RequestworkBook for updating status.&#xA;" DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="562,217" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
               <ui:MultipleAssign.AssignOperations>
                 <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_28">
@@ -342,720 +343,831 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:MultipleAssign>
-            <Sequence sap:VirtualizedContainerService.HintSize="558,8061" sap2010:WorkflowViewState.IdRef="Sequence_30">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <Assign sap:VirtualizedContainerService.HintSize="516,60" sap2010:WorkflowViewState.IdRef="Assign_57">
-                <Assign.To>
-                  <OutArgument x:TypeArguments="x:String">[cashSheet]</OutArgument>
-                </Assign.To>
-                <Assign.Value>
-                  <InArgument x:TypeArguments="x:String">[row.item(5).ToString]</InArgument>
-                </Assign.Value>
-              </Assign>
-              <If Condition="[CashSheet = &quot;Y&quot; or CashSheet = &quot;y&quot; or CashSheet = &quot;Pending&quot;]" DisplayName="Cash Sheet" sap:VirtualizedContainerService.HintSize="516,681" sap2010:WorkflowViewState.IdRef="If_5">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <If.Then>
-                  <Sequence sap:VirtualizedContainerService.HintSize="376,504" sap2010:WorkflowViewState.IdRef="Sequence_16">
+            <If Condition="[in_Config(&quot;RunCashSheet&quot;).ToString = &quot;Y&quot;]" sap:VirtualizedContainerService.HintSize="562,243" sap2010:WorkflowViewState.IdRef="If_10">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_57">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[cashSheet]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[row.item(5).ToString]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <If Condition="[CashSheet = &quot;Y&quot; or CashSheet = &quot;y&quot; or CashSheet = &quot;Pending&quot;]" DisplayName="Cash Sheet" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="If_5">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_48">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[ReportName]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">Cash Sheet</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_80">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[StartDateString]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">[StartDate.ToString("MMM dd, yyyy (ddd)")]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_81">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[EndDateString]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">[EndDate.ToString("MMM dd, yyyy (ddd)")]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Add Que Item workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="QSRSoft Add Que Item.xaml">
-                      <ui:InvokeWorkflowFile.Arguments>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_QueueName">[QueueName]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_ReportName">[ReportName]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_ClientName">[ClientName]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_ClientNum">[ClientNum]</InArgument>
-                        <InArgument x:TypeArguments="s:DateTime" x:Key="in_PostponeDate">[PostponeDate]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_StartDate">[StartDateString]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_EndDate">[EndDateString]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_Priority">[Priority]</InArgument>
-                        <InArgument x:TypeArguments="s:DateTime" x:Key="in_Deadline">[Deadline]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_FirmID">[FirmID]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_Subfolder">[Subfolder]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_Query">[Query]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_RequestWorkbookName">[RequestWorkbookName]</InArgument>
-                      </ui:InvokeWorkflowFile.Arguments>
-                    </ui:InvokeWorkflowFile>
-                  </Sequence>
-                </If.Then>
-              </If>
-              <Assign sap:VirtualizedContainerService.HintSize="516,60" sap2010:WorkflowViewState.IdRef="Assign_100">
-                <Assign.To>
-                  <OutArgument x:TypeArguments="x:String">[cashSheetMA]</OutArgument>
-                </Assign.To>
-                <Assign.Value>
-                  <InArgument x:TypeArguments="x:String">[row.item(6).ToString]</InArgument>
-                </Assign.Value>
-              </Assign>
-              <If Condition="[CashSheetMA = &quot;Y&quot; or CashSheetMA = &quot;y&quot; or CashSheetMA = &quot;Pending&quot;]" DisplayName="Cash Sheet Mass" sap:VirtualizedContainerService.HintSize="516,782" sap2010:WorkflowViewState.IdRef="If_9">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <If.Then>
-                  <Sequence sap:VirtualizedContainerService.HintSize="376,605" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="376,504" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_48">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[ReportName]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">Cash Sheet</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_80">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[StartDateString]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[StartDate.ToString("MMM dd, yyyy (ddd)")]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_81">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[EndDateString]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[EndDate.ToString("MMM dd, yyyy (ddd)")]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Add Que Item workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="QSRSoft Add Que Item.xaml">
+                          <ui:InvokeWorkflowFile.Arguments>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_QueueName">[QueueName]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_ReportName">[ReportName]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_ClientName">[ClientName]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_ClientNum">[ClientNum]</InArgument>
+                            <InArgument x:TypeArguments="s:DateTime" x:Key="in_PostponeDate">[PostponeDate]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_StartDate">[StartDateString]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_EndDate">[EndDateString]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_Priority">[Priority]</InArgument>
+                            <InArgument x:TypeArguments="s:DateTime" x:Key="in_Deadline">[Deadline]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_FirmID">[FirmID]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_Subfolder">[Subfolder]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_Query">[Query]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_RequestWorkbookName">[RequestWorkbookName]</InArgument>
+                          </ui:InvokeWorkflowFile.Arguments>
+                        </ui:InvokeWorkflowFile>
+                      </Sequence>
+                    </If.Then>
+                  </If>
+                </Sequence>
+              </If.Then>
+            </If>
+            <If Condition="[in_Config(&quot;RunCashSheetMA&quot;).ToString = &quot;Y&quot;]" sap:VirtualizedContainerService.HintSize="562,263" sap2010:WorkflowViewState.IdRef="If_11">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_100">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[cashSheetMA]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[row.item(6).ToString]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <If Condition="[CashSheetMA = &quot;Y&quot; or CashSheetMA = &quot;y&quot; or CashSheetMA = &quot;Pending&quot;]" DisplayName="Cash Sheet Mass" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="If_9">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_101">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[ReportName]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">Cash Sheet MA</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_102">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[StartDateString]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">[CashSheetMassStartDate.ToString("MMM dd, yyyy (ddd)")]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_103">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[EndDateString]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">[CashSheetMassEndDate.ToString("MMM dd, yyyy (ddd)")]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_11" Text="[&quot;MA QSRSoft End Date: &quot;+EndDateString]" />
-                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Add Que Item workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_21" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="QSRSoft Add Que Item.xaml">
-                      <ui:InvokeWorkflowFile.Arguments>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_QueueName">[QueueName]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_ReportName">[ReportName]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_ClientName">[ClientName]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_ClientNum">[ClientNum]</InArgument>
-                        <InArgument x:TypeArguments="s:DateTime" x:Key="in_PostponeDate">[MassPostponeDate]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_StartDate">[StartDateString]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_EndDate">[EndDateString]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_Priority">[Priority]</InArgument>
-                        <InArgument x:TypeArguments="s:DateTime" x:Key="in_Deadline">[Deadline]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_FirmID">[FirmID]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_Subfolder">[Subfolder]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_Query">[Query]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_RequestWorkbookName">[RequestWorkbookName]</InArgument>
-                      </ui:InvokeWorkflowFile.Arguments>
-                    </ui:InvokeWorkflowFile>
-                  </Sequence>
-                </If.Then>
-              </If>
-              <Assign sap:VirtualizedContainerService.HintSize="516,60" sap2010:WorkflowViewState.IdRef="Assign_58">
-                <Assign.To>
-                  <OutArgument x:TypeArguments="x:String">[cashless]</OutArgument>
-                </Assign.To>
-                <Assign.Value>
-                  <InArgument x:TypeArguments="x:String">[row.item(4).ToString]</InArgument>
-                </Assign.Value>
-              </Assign>
-              <If Condition="[Cashless = &quot;Y&quot; or Cashless = &quot;y&quot; or  Cashless = &quot;Pending&quot;]" DisplayName="Cashless" sap:VirtualizedContainerService.HintSize="516,681" sap2010:WorkflowViewState.IdRef="If_5">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <If.Then>
-                  <Sequence sap:VirtualizedContainerService.HintSize="376,504" sap2010:WorkflowViewState.IdRef="Sequence_16">
-                    <Sequence.Variables>
-                      <Variable x:TypeArguments="x:String" Name="ReportName" />
-                    </Sequence.Variables>
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="376,605" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_101">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[ReportName]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">Cash Sheet MA</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_102">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[StartDateString]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[CashSheetMassStartDate.ToString("MMM dd, yyyy (ddd)")]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_103">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[EndDateString]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[CashSheetMassEndDate.ToString("MMM dd, yyyy (ddd)")]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_11" Text="[&quot;MA QSRSoft End Date: &quot;+EndDateString]" />
+                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Add Que Item workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_21" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="QSRSoft Add Que Item.xaml">
+                          <ui:InvokeWorkflowFile.Arguments>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_QueueName">[QueueName]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_ReportName">[ReportName]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_ClientName">[ClientName]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_ClientNum">[ClientNum]</InArgument>
+                            <InArgument x:TypeArguments="s:DateTime" x:Key="in_PostponeDate">[MassPostponeDate]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_StartDate">[StartDateString]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_EndDate">[EndDateString]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_Priority">[Priority]</InArgument>
+                            <InArgument x:TypeArguments="s:DateTime" x:Key="in_Deadline">[Deadline]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_FirmID">[FirmID]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_Subfolder">[Subfolder]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_Query">[Query]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_RequestWorkbookName">[RequestWorkbookName]</InArgument>
+                          </ui:InvokeWorkflowFile.Arguments>
+                        </ui:InvokeWorkflowFile>
+                      </Sequence>
+                    </If.Then>
+                  </If>
+                </Sequence>
+              </If.Then>
+            </If>
+            <If Condition="[in_Config(&quot;RunCashless&quot;).ToString = &quot;Y&quot;]" sap:VirtualizedContainerService.HintSize="562,243" sap2010:WorkflowViewState.IdRef="If_12">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_58">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[cashless]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[row.item(4).ToString]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <If Condition="[Cashless = &quot;Y&quot; or Cashless = &quot;y&quot; or  Cashless = &quot;Pending&quot;]" DisplayName="Cashless" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="If_5">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_48">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[ReportName]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">Cashless</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_82">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[StartDateString]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">Monthly</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_83">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[EndDateString]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">Monthly</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Add Que Item workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="QSRSoft Add Que Item.xaml">
-                      <ui:InvokeWorkflowFile.Arguments>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_QueueName">[QueueName]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_ReportName">[ReportName]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_ClientName">[ClientName]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_ClientNum">[ClientNum]</InArgument>
-                        <InArgument x:TypeArguments="s:DateTime" x:Key="in_PostponeDate">[PostponeDate]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_StartDate">[StartDateString]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_EndDate">[EndDateString]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_Priority">[Priority]</InArgument>
-                        <InArgument x:TypeArguments="s:DateTime" x:Key="in_Deadline">[Deadline]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_FirmID">[FirmID]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_Subfolder">[Subfolder]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_Query">[Query]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_RequestWorkbookName">[RequestWorkbookName]</InArgument>
-                      </ui:InvokeWorkflowFile.Arguments>
-                    </ui:InvokeWorkflowFile>
-                  </Sequence>
-                </If.Then>
-              </If>
-              <Assign sap:VirtualizedContainerService.HintSize="516,60" sap2010:WorkflowViewState.IdRef="Assign_59">
-                <Assign.To>
-                  <OutArgument x:TypeArguments="x:String">[contFoodCost]</OutArgument>
-                </Assign.To>
-                <Assign.Value>
-                  <InArgument x:TypeArguments="x:String">[row.item(7).ToString]</InArgument>
-                </Assign.Value>
-              </Assign>
-              <If Condition="[ContFoodCost = &quot;Y&quot; or ContFoodCost = &quot;y&quot; or  ContFoodCost = &quot;Pending&quot;]" DisplayName="Cont Food Cost" sap:VirtualizedContainerService.HintSize="516,681" sap2010:WorkflowViewState.IdRef="If_5">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <If.Then>
-                  <Sequence sap:VirtualizedContainerService.HintSize="376,504" sap2010:WorkflowViewState.IdRef="Sequence_16">
-                    <Sequence.Variables>
-                      <Variable x:TypeArguments="x:String" Name="ReportName" />
-                    </Sequence.Variables>
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="376,504" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                        <Sequence.Variables>
+                          <Variable x:TypeArguments="x:String" Name="ReportName" />
+                        </Sequence.Variables>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_48">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[ReportName]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">Cashless</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_82">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[StartDateString]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">Monthly</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_83">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[EndDateString]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">Monthly</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Add Que Item workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="QSRSoft Add Que Item.xaml">
+                          <ui:InvokeWorkflowFile.Arguments>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_QueueName">[QueueName]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_ReportName">[ReportName]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_ClientName">[ClientName]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_ClientNum">[ClientNum]</InArgument>
+                            <InArgument x:TypeArguments="s:DateTime" x:Key="in_PostponeDate">[PostponeDate]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_StartDate">[StartDateString]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_EndDate">[EndDateString]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_Priority">[Priority]</InArgument>
+                            <InArgument x:TypeArguments="s:DateTime" x:Key="in_Deadline">[Deadline]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_FirmID">[FirmID]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_Subfolder">[Subfolder]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_Query">[Query]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_RequestWorkbookName">[RequestWorkbookName]</InArgument>
+                          </ui:InvokeWorkflowFile.Arguments>
+                        </ui:InvokeWorkflowFile>
+                      </Sequence>
+                    </If.Then>
+                  </If>
+                </Sequence>
+              </If.Then>
+            </If>
+            <If Condition="[in_Config(&quot;RunControllableFoodCost&quot;).ToString = &quot;Y&quot;]" sap:VirtualizedContainerService.HintSize="562,243" sap2010:WorkflowViewState.IdRef="If_13">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_59">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[contFoodCost]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[row.item(7).ToString]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <If Condition="[ContFoodCost = &quot;Y&quot; or ContFoodCost = &quot;y&quot; or  ContFoodCost = &quot;Pending&quot;]" DisplayName="Cont Food Cost" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="If_5">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_48">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[ReportName]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">Controllable Food Cost</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_84">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[StartDateString]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">[StartDate.ToString("MMMM, yyyy")]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_85">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[EndDateString]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">
-                          <Literal x:TypeArguments="x:String" Value="" />
-                        </InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Add Que Item workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="QSRSoft Add Que Item.xaml">
-                      <ui:InvokeWorkflowFile.Arguments>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_QueueName">[QueueName]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_ReportName">[ReportName]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_ClientName">[ClientName]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_ClientNum">[ClientNum]</InArgument>
-                        <InArgument x:TypeArguments="s:DateTime" x:Key="in_PostponeDate">[PostponeDate]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_StartDate">[StartDateString]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_EndDate">[EndDateString]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_Priority">[Priority]</InArgument>
-                        <InArgument x:TypeArguments="s:DateTime" x:Key="in_Deadline">[Deadline]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_FirmID">[FirmID]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_Subfolder">[Subfolder]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_Query">[Query]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_RequestWorkbookName">[RequestWorkbookName]</InArgument>
-                      </ui:InvokeWorkflowFile.Arguments>
-                    </ui:InvokeWorkflowFile>
-                  </Sequence>
-                </If.Then>
-              </If>
-              <Assign sap:VirtualizedContainerService.HintSize="516,60" sap2010:WorkflowViewState.IdRef="Assign_60">
-                <Assign.To>
-                  <OutArgument x:TypeArguments="x:String">[DeliveryByVendor]</OutArgument>
-                </Assign.To>
-                <Assign.Value>
-                  <InArgument x:TypeArguments="x:String">[row.item(8).ToString]</InArgument>
-                </Assign.Value>
-              </Assign>
-              <If Condition="[DeliveryByVendor = &quot;Y&quot; or DeliveryByVendor = &quot;y&quot; or  DeliveryByVendor = &quot;Pending&quot;]" DisplayName="Delivery" sap:VirtualizedContainerService.HintSize="516,681" sap2010:WorkflowViewState.IdRef="If_5">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <If.Then>
-                  <Sequence sap:VirtualizedContainerService.HintSize="376,504" sap2010:WorkflowViewState.IdRef="Sequence_16">
-                    <Sequence.Variables>
-                      <Variable x:TypeArguments="x:String" Name="ReportName" />
-                    </Sequence.Variables>
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="376,504" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                        <Sequence.Variables>
+                          <Variable x:TypeArguments="x:String" Name="ReportName" />
+                        </Sequence.Variables>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_48">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[ReportName]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">Controllable Food Cost</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_84">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[StartDateString]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[StartDate.ToString("MMMM, yyyy")]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_85">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[EndDateString]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">
+                              <Literal x:TypeArguments="x:String" Value="" />
+                            </InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Add Que Item workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="QSRSoft Add Que Item.xaml">
+                          <ui:InvokeWorkflowFile.Arguments>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_QueueName">[QueueName]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_ReportName">[ReportName]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_ClientName">[ClientName]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_ClientNum">[ClientNum]</InArgument>
+                            <InArgument x:TypeArguments="s:DateTime" x:Key="in_PostponeDate">[PostponeDate]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_StartDate">[StartDateString]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_EndDate">[EndDateString]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_Priority">[Priority]</InArgument>
+                            <InArgument x:TypeArguments="s:DateTime" x:Key="in_Deadline">[Deadline]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_FirmID">[FirmID]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_Subfolder">[Subfolder]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_Query">[Query]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_RequestWorkbookName">[RequestWorkbookName]</InArgument>
+                          </ui:InvokeWorkflowFile.Arguments>
+                        </ui:InvokeWorkflowFile>
+                      </Sequence>
+                    </If.Then>
+                  </If>
+                </Sequence>
+              </If.Then>
+            </If>
+            <If Condition="[in_Config(&quot;RunDeposits&quot;).ToString = &quot;Y&quot;]" sap:VirtualizedContainerService.HintSize="562,243" sap2010:WorkflowViewState.IdRef="If_18">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_104">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[Deposits]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[row.item(9).ToString]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <If Condition="[Deposits = &quot;Y&quot; or Deposits = &quot;y&quot; or Deposits = &quot;Pending&quot;]" DisplayName="Deposits" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="If_17">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="376,504" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                        <Sequence.Variables>
+                          <Variable x:TypeArguments="x:String" Name="ReportName" />
+                        </Sequence.Variables>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_105">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[ReportName]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">Deposits</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_106">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[StartDateString]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[StartDate.ToString("MMM dd, yyyy (ddd)")]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_107">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[EndDateString]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[EndDate.ToString("MMM dd, yyyy (ddd)")]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Add Que Item workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_22" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="QSRSoft Add Que Item.xaml">
+                          <ui:InvokeWorkflowFile.Arguments>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_QueueName">[QueueName]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_ReportName">[ReportName]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_ClientName">[ClientName]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_ClientNum">[ClientNum]</InArgument>
+                            <InArgument x:TypeArguments="s:DateTime" x:Key="in_PostponeDate">[PostponeDate]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_StartDate">[StartDateString]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_EndDate">[EndDateString]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_Priority">[Priority]</InArgument>
+                            <InArgument x:TypeArguments="s:DateTime" x:Key="in_Deadline">[Deadline]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_FirmID">[FirmID]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_Subfolder">[Subfolder]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_Query">[Query]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_RequestWorkbookName">[RequestWorkbookName]</InArgument>
+                          </ui:InvokeWorkflowFile.Arguments>
+                        </ui:InvokeWorkflowFile>
+                      </Sequence>
+                    </If.Then>
+                  </If>
+                </Sequence>
+              </If.Then>
+            </If>
+            <If Condition="[in_Config(&quot;RunLabor&quot;).ToString = &quot;Y&quot;]" sap:VirtualizedContainerService.HintSize="562,243" sap2010:WorkflowViewState.IdRef="If_21">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_40">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_108">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[Labor]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[row.item(12).ToString]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <If Condition="[Labor = &quot;Y&quot; or Labor = &quot;y&quot; or Labor = &quot;Pending&quot;]" DisplayName="Labor" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="If_20">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="376,504" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                        <Sequence.Variables>
+                          <Variable x:TypeArguments="x:String" Name="ReportName" />
+                        </Sequence.Variables>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_109">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[ReportName]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">["Labor"]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_110">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[StartDateString]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[StartDate.ToString("MMM dd, yyyy (ddd)")]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_111">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[EndDateString]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[EndDate.ToString("MMM dd, yyyy (ddd)")]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Add Que Item workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_23" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="QSRSoft Add Que Item.xaml">
+                          <ui:InvokeWorkflowFile.Arguments>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_QueueName">[QueueName]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_ReportName">[ReportName]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_ClientName">[ClientName]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_ClientNum">[ClientNum]</InArgument>
+                            <InArgument x:TypeArguments="s:DateTime" x:Key="in_PostponeDate">[PostponeDate]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_StartDate">[StartDateString]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_EndDate">[EndDateString]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_Priority">[Priority]</InArgument>
+                            <InArgument x:TypeArguments="s:DateTime" x:Key="in_Deadline">[Deadline]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_FirmID">[FirmID]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_Subfolder">[Subfolder]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_Query">[Query]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_RequestWorkbookName">[RequestWorkbookName]</InArgument>
+                          </ui:InvokeWorkflowFile.Arguments>
+                        </ui:InvokeWorkflowFile>
+                      </Sequence>
+                    </If.Then>
+                  </If>
+                </Sequence>
+              </If.Then>
+            </If>
+            <If Condition="[in_Config(&quot;RunStoreTransfers&quot;).ToString = &quot;Y&quot;]" sap:VirtualizedContainerService.HintSize="562,243" sap2010:WorkflowViewState.IdRef="If_24">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_112">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[storeTransfers]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[row.item(11).ToString]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <If Condition="[StoreTransfers = &quot;Y&quot; or StoreTransfers = &quot;y&quot; or StoreTransfers = &quot;Pending&quot;]" DisplayName="Store Transfers" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="If_23">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="376,504" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_113">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[ReportName]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">Store Transfers</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_114">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[StartDateString]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[StartDate.ToString("MMM dd, yyyy (ddd)")]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_115">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[EndDateString]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[EndDate.ToString("MMM dd, yyyy (ddd)")]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Add Que Item workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_24" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="QSRSoft Add Que Item.xaml">
+                          <ui:InvokeWorkflowFile.Arguments>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_QueueName">[QueueName]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_ReportName">[ReportName]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_ClientName">[ClientName]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_ClientNum">[ClientNum]</InArgument>
+                            <InArgument x:TypeArguments="s:DateTime" x:Key="in_PostponeDate">[PostponeDate]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_StartDate">[StartDateString]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_EndDate">[EndDateString]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_Priority">[Priority]</InArgument>
+                            <InArgument x:TypeArguments="s:DateTime" x:Key="in_Deadline">[Deadline]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_FirmID">[FirmID]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_Subfolder">[Subfolder]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_Query">[Query]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_RequestWorkbookName">[RequestWorkbookName]</InArgument>
+                          </ui:InvokeWorkflowFile.Arguments>
+                        </ui:InvokeWorkflowFile>
+                      </Sequence>
+                    </If.Then>
+                  </If>
+                </Sequence>
+              </If.Then>
+            </If>
+            <If Condition="[in_Config(&quot;RunDelivery&quot;).ToString = &quot;Y&quot;]" sap:VirtualizedContainerService.HintSize="562,243" sap2010:WorkflowViewState.IdRef="If_14">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_60">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[DeliveryByVendor]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[row.item(8).ToString]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <If Condition="[DeliveryByVendor = &quot;Y&quot; or DeliveryByVendor = &quot;y&quot; or  DeliveryByVendor = &quot;Pending&quot;]" DisplayName="Delivery" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="If_5">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="376,504" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                        <Sequence.Variables>
+                          <Variable x:TypeArguments="x:String" Name="ReportName" />
+                        </Sequence.Variables>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_48">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[ReportName]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">["Delivery"]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_86">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[StartDateString]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[DeliveryRecStartDate.ToString("MMM dd, yyyy (ddd)")]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_87">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[EndDateString]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[EndDate.ToString("MMM dd, yyyy (ddd)")]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Add Que Item workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_15" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="QSRSoft Add Que Item.xaml">
+                          <ui:InvokeWorkflowFile.Arguments>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_QueueName">[QueueName]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_ReportName">[ReportName]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_ClientName">[ClientName]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_ClientNum">[ClientNum]</InArgument>
+                            <InArgument x:TypeArguments="s:DateTime" x:Key="in_PostponeDate">[PostponeDate]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_StartDate">[StartDateString]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_EndDate">[EndDateString]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_Priority">[Priority]</InArgument>
+                            <InArgument x:TypeArguments="s:DateTime" x:Key="in_Deadline">[Deadline]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_FirmID">[FirmID]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_Subfolder">[Subfolder]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_Query">[Query]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_RequestWorkbookName">[RequestWorkbookName]</InArgument>
+                          </ui:InvokeWorkflowFile.Arguments>
+                        </ui:InvokeWorkflowFile>
+                      </Sequence>
+                    </If.Then>
+                  </If>
+                </Sequence>
+              </If.Then>
+            </If>
+            <If Condition="[in_Config(&quot;RunAccruedLabor&quot;).ToString = &quot;Y&quot;]" sap:VirtualizedContainerService.HintSize="562,243" sap2010:WorkflowViewState.IdRef="If_27">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_116">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[AccruedLabor]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[row.item(13).ToString]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <ui:IsMatch BuilderPattern="\d+\/\d+\/\d+" DisplayName="Is Match" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="IsMatch_3" Input="[AccruedLabor]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;\\d+\\\/\\d+\\\/\\d+&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="\d+\/\d+\/\d+" RegexOption="IgnoreCase" Result="[AccruedLaborExists]" />
+                  <If Condition="[AccruedLaborExists = True]" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="If_26">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="480,924" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="438,60" sap2010:WorkflowViewState.IdRef="Assign_117">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[ReportName]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">["Accrued Labor"]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="438,61" sap2010:WorkflowViewState.IdRef="WriteLine_14" Text="[AccruedLabor]" />
+                        <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,631" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+                          <TryCatch.Try>
+                            <Sequence sap:VirtualizedContainerService.HintSize="376,404" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_118">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[StartDateString]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">[(Convert.ToDateTime(AccruedLabor)).ToString("MMM dd, yyyy (ddd)")]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_119">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[EndDateString]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">[EndDate.ToString("MMM dd, yyyy (ddd)")]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Add Que Item workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_25" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="QSRSoft Add Que Item.xaml">
+                                <ui:InvokeWorkflowFile.Arguments>
+                                  <InArgument x:TypeArguments="x:String" x:Key="in_QueueName">[QueueName]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="in_ReportName">[ReportName]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="in_ClientName">[ClientName]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="in_ClientNum">[ClientNum]</InArgument>
+                                  <InArgument x:TypeArguments="s:DateTime" x:Key="in_PostponeDate">[PostponeDate]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="in_StartDate">[StartDateString]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="in_EndDate">[EndDateString]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="in_Priority">[Priority]</InArgument>
+                                  <InArgument x:TypeArguments="s:DateTime" x:Key="in_Deadline">[Deadline]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="in_FirmID">[FirmID]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="in_Subfolder">[Subfolder]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="in_Query">[Query]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="in_RequestWorkbookName">[RequestWorkbookName]</InArgument>
+                                </ui:InvokeWorkflowFile.Arguments>
+                              </ui:InvokeWorkflowFile>
+                            </Sequence>
+                          </TryCatch.Try>
+                          <TryCatch.Catches>
+                            <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ActivityAction x:TypeArguments="s:Exception">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                </ActivityAction.Argument>
+                                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_15" Text="[&quot;Accrued Labor Fail: &quot;+ClientNum]" />
+                              </ActivityAction>
+                            </Catch>
+                          </TryCatch.Catches>
+                        </TryCatch>
+                      </Sequence>
+                    </If.Then>
+                  </If>
+                </Sequence>
+              </If.Then>
+            </If>
+            <If Condition="[in_Config(&quot;RunEndingInventory&quot;).ToString = &quot;Y&quot;]" sap:VirtualizedContainerService.HintSize="562,1164" sap2010:WorkflowViewState.IdRef="If_15">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="526,987" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_66">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[EndInv]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[row.item(10).ToString]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <If Condition="[EndInv = &quot;Y&quot; or EndInv = &quot;y&quot; or  EndInv = &quot;Pending&quot;]" sap:VirtualizedContainerService.HintSize="484,795" sap2010:WorkflowViewState.IdRef="If_6">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_48">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[ReportName]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">["Delivery"]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_86">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[StartDateString]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">[DeliveryRecStartDate.ToString("MMM dd, yyyy (ddd)")]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_87">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[EndDateString]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">[EndDate.ToString("MMM dd, yyyy (ddd)")]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Add Que Item workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_15" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="QSRSoft Add Que Item.xaml">
-                      <ui:InvokeWorkflowFile.Arguments>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_QueueName">[QueueName]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_ReportName">[ReportName]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_ClientName">[ClientName]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_ClientNum">[ClientNum]</InArgument>
-                        <InArgument x:TypeArguments="s:DateTime" x:Key="in_PostponeDate">[PostponeDate]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_StartDate">[StartDateString]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_EndDate">[EndDateString]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_Priority">[Priority]</InArgument>
-                        <InArgument x:TypeArguments="s:DateTime" x:Key="in_Deadline">[Deadline]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_FirmID">[FirmID]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_Subfolder">[Subfolder]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_Query">[Query]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_RequestWorkbookName">[RequestWorkbookName]</InArgument>
-                      </ui:InvokeWorkflowFile.Arguments>
-                    </ui:InvokeWorkflowFile>
-                  </Sequence>
-                </If.Then>
-              </If>
-              <Assign sap:VirtualizedContainerService.HintSize="516,60" sap2010:WorkflowViewState.IdRef="Assign_61">
-                <Assign.To>
-                  <OutArgument x:TypeArguments="x:String">[Deposits]</OutArgument>
-                </Assign.To>
-                <Assign.Value>
-                  <InArgument x:TypeArguments="x:String">[row.item(9).ToString]</InArgument>
-                </Assign.Value>
-              </Assign>
-              <If Condition="[Deposits = &quot;Y&quot; or Deposits = &quot;y&quot; or Deposits = &quot;Pending&quot;]" DisplayName="Deposits" sap:VirtualizedContainerService.HintSize="516,681" sap2010:WorkflowViewState.IdRef="If_5">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <If.Then>
-                  <Sequence sap:VirtualizedContainerService.HintSize="376,504" sap2010:WorkflowViewState.IdRef="Sequence_16">
-                    <Sequence.Variables>
-                      <Variable x:TypeArguments="x:String" Name="ReportName" />
-                    </Sequence.Variables>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_48">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[ReportName]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">Deposits</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_88">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[StartDateString]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">[StartDate.ToString("MMM dd, yyyy (ddd)")]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_89">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[EndDateString]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">[EndDate.ToString("MMM dd, yyyy (ddd)")]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Add Que Item workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_16" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="QSRSoft Add Que Item.xaml">
-                      <ui:InvokeWorkflowFile.Arguments>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_QueueName">[QueueName]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_ReportName">[ReportName]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_ClientName">[ClientName]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_ClientNum">[ClientNum]</InArgument>
-                        <InArgument x:TypeArguments="s:DateTime" x:Key="in_PostponeDate">[PostponeDate]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_StartDate">[StartDateString]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_EndDate">[EndDateString]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_Priority">[Priority]</InArgument>
-                        <InArgument x:TypeArguments="s:DateTime" x:Key="in_Deadline">[Deadline]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_FirmID">[FirmID]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_Subfolder">[Subfolder]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_Query">[Query]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_RequestWorkbookName">[RequestWorkbookName]</InArgument>
-                      </ui:InvokeWorkflowFile.Arguments>
-                    </ui:InvokeWorkflowFile>
-                  </Sequence>
-                </If.Then>
-              </If>
-              <Assign sap:VirtualizedContainerService.HintSize="516,60" sap2010:WorkflowViewState.IdRef="Assign_63">
-                <Assign.To>
-                  <OutArgument x:TypeArguments="x:String">[Labor]</OutArgument>
-                </Assign.To>
-                <Assign.Value>
-                  <InArgument x:TypeArguments="x:String">[row.item(12).ToString]</InArgument>
-                </Assign.Value>
-              </Assign>
-              <If Condition="[Labor = &quot;Y&quot; or Labor = &quot;y&quot; or Labor = &quot;Pending&quot;]" DisplayName="Labor" sap:VirtualizedContainerService.HintSize="516,681" sap2010:WorkflowViewState.IdRef="If_5">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <If.Then>
-                  <Sequence sap:VirtualizedContainerService.HintSize="376,504" sap2010:WorkflowViewState.IdRef="Sequence_16">
-                    <Sequence.Variables>
-                      <Variable x:TypeArguments="x:String" Name="ReportName" />
-                    </Sequence.Variables>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_48">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[ReportName]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">["Labor"]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_90">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[StartDateString]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">[StartDate.ToString("MMM dd, yyyy (ddd)")]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_91">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[EndDateString]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">[EndDate.ToString("MMM dd, yyyy (ddd)")]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Add Que Item workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_17" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="QSRSoft Add Que Item.xaml">
-                      <ui:InvokeWorkflowFile.Arguments>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_QueueName">[QueueName]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_ReportName">[ReportName]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_ClientName">[ClientName]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_ClientNum">[ClientNum]</InArgument>
-                        <InArgument x:TypeArguments="s:DateTime" x:Key="in_PostponeDate">[PostponeDate]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_StartDate">[StartDateString]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_EndDate">[EndDateString]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_Priority">[Priority]</InArgument>
-                        <InArgument x:TypeArguments="s:DateTime" x:Key="in_Deadline">[Deadline]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_FirmID">[FirmID]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_Subfolder">[Subfolder]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_Query">[Query]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_RequestWorkbookName">[RequestWorkbookName]</InArgument>
-                      </ui:InvokeWorkflowFile.Arguments>
-                    </ui:InvokeWorkflowFile>
-                  </Sequence>
-                </If.Then>
-              </If>
-              <Assign sap:VirtualizedContainerService.HintSize="516,60" sap2010:WorkflowViewState.IdRef="Assign_65">
-                <Assign.To>
-                  <OutArgument x:TypeArguments="x:String">[storeTransfers]</OutArgument>
-                </Assign.To>
-                <Assign.Value>
-                  <InArgument x:TypeArguments="x:String">[row.item(11).ToString]</InArgument>
-                </Assign.Value>
-              </Assign>
-              <If Condition="[StoreTransfers = &quot;Y&quot; or StoreTransfers = &quot;y&quot; or StoreTransfers = &quot;Pending&quot;]" DisplayName="Store Transfers" sap:VirtualizedContainerService.HintSize="516,681" sap2010:WorkflowViewState.IdRef="If_5">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <If.Then>
-                  <Sequence sap:VirtualizedContainerService.HintSize="376,504" sap2010:WorkflowViewState.IdRef="Sequence_16">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_48">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[ReportName]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">Store Transfers</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_78">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[StartDateString]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">[StartDate.ToString("MMM dd, yyyy (ddd)")]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_79">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[EndDateString]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">[EndDate.ToString("MMM dd, yyyy (ddd)")]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Add Que Item workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="QSRSoft Add Que Item.xaml">
-                      <ui:InvokeWorkflowFile.Arguments>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_QueueName">[QueueName]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_ReportName">[ReportName]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_ClientName">[ClientName]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_ClientNum">[ClientNum]</InArgument>
-                        <InArgument x:TypeArguments="s:DateTime" x:Key="in_PostponeDate">[PostponeDate]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_StartDate">[StartDateString]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_EndDate">[EndDateString]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_Priority">[Priority]</InArgument>
-                        <InArgument x:TypeArguments="s:DateTime" x:Key="in_Deadline">[Deadline]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_FirmID">[FirmID]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_Subfolder">[Subfolder]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_Query">[Query]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_RequestWorkbookName">[RequestWorkbookName]</InArgument>
-                      </ui:InvokeWorkflowFile.Arguments>
-                    </ui:InvokeWorkflowFile>
-                  </Sequence>
-                </If.Then>
-              </If>
-              <Assign sap:VirtualizedContainerService.HintSize="516,60" sap2010:WorkflowViewState.IdRef="Assign_96">
-                <Assign.To>
-                  <OutArgument x:TypeArguments="x:String">[AccruedLabor]</OutArgument>
-                </Assign.To>
-                <Assign.Value>
-                  <InArgument x:TypeArguments="x:String">[row.item(13).ToString]</InArgument>
-                </Assign.Value>
-              </Assign>
-              <ui:IsMatch BuilderPattern="\d+\/\d+\/\d+" DisplayName="Is Match" sap:VirtualizedContainerService.HintSize="516,59" sap2010:WorkflowViewState.IdRef="IsMatch_2" Input="[AccruedLabor]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;\\d+\\\/\\d+\\\/\\d+&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="\d+\/\d+\/\d+" RegexOption="IgnoreCase" Result="[AccruedLaborExists]" />
-              <If Condition="[AccruedLaborExists = True]" sap:VirtualizedContainerService.HintSize="516,1101" sap2010:WorkflowViewState.IdRef="If_8">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <If.Then>
-                  <Sequence sap:VirtualizedContainerService.HintSize="480,924" sap2010:WorkflowViewState.IdRef="Sequence_29">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <Assign sap:VirtualizedContainerService.HintSize="438,60" sap2010:WorkflowViewState.IdRef="Assign_97">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[ReportName]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">["Accrued Labor"]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="438,61" sap2010:WorkflowViewState.IdRef="WriteLine_8" Text="[AccruedLabor]" />
-                    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,631" sap2010:WorkflowViewState.IdRef="TryCatch_2">
-                      <TryCatch.Try>
-                        <Sequence sap:VirtualizedContainerService.HintSize="376,404" sap2010:WorkflowViewState.IdRef="Sequence_28">
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_98">
-                            <Assign.To>
-                              <OutArgument x:TypeArguments="x:String">[StartDateString]</OutArgument>
-                            </Assign.To>
-                            <Assign.Value>
-                              <InArgument x:TypeArguments="x:String">[(Convert.ToDateTime(AccruedLabor)).ToString("MMM dd, yyyy (ddd)")]</InArgument>
-                            </Assign.Value>
-                          </Assign>
-                          <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_99">
-                            <Assign.To>
-                              <OutArgument x:TypeArguments="x:String">[EndDateString]</OutArgument>
-                            </Assign.To>
-                            <Assign.Value>
-                              <InArgument x:TypeArguments="x:String">[EndDate.ToString("MMM dd, yyyy (ddd)")]</InArgument>
-                            </Assign.Value>
-                          </Assign>
-                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Add Que Item workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_20" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="QSRSoft Add Que Item.xaml">
-                            <ui:InvokeWorkflowFile.Arguments>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_QueueName">[QueueName]</InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_ReportName">[ReportName]</InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_ClientName">[ClientName]</InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_ClientNum">[ClientNum]</InArgument>
-                              <InArgument x:TypeArguments="s:DateTime" x:Key="in_PostponeDate">[PostponeDate]</InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_StartDate">[StartDateString]</InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_EndDate">[EndDateString]</InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_Priority">[Priority]</InArgument>
-                              <InArgument x:TypeArguments="s:DateTime" x:Key="in_Deadline">[Deadline]</InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_FirmID">[FirmID]</InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_Subfolder">[Subfolder]</InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_Query">[Query]</InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="in_RequestWorkbookName">[RequestWorkbookName]</InArgument>
-                            </ui:InvokeWorkflowFile.Arguments>
-                          </ui:InvokeWorkflowFile>
-                        </Sequence>
-                      </TryCatch.Try>
-                      <TryCatch.Catches>
-                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_2">
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <ActivityAction x:TypeArguments="s:Exception">
-                            <ActivityAction.Argument>
-                              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
-                            </ActivityAction.Argument>
-                            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_9" Text="[&quot;Accrued Labor Fail: &quot;+ClientNum]" />
-                          </ActivityAction>
-                        </Catch>
-                      </TryCatch.Catches>
-                    </TryCatch>
-                  </Sequence>
-                </If.Then>
-              </If>
-            </Sequence>
-            <Assign sap:VirtualizedContainerService.HintSize="558,60" sap2010:WorkflowViewState.IdRef="Assign_66">
-              <Assign.To>
-                <OutArgument x:TypeArguments="x:String">[EndInv]</OutArgument>
-              </Assign.To>
-              <Assign.Value>
-                <InArgument x:TypeArguments="x:String">[row.item(10).ToString]</InArgument>
-              </Assign.Value>
-            </Assign>
-            <If Condition="[EndInv = &quot;Y&quot; or EndInv = &quot;y&quot; or  EndInv = &quot;Pending&quot;]" sap:VirtualizedContainerService.HintSize="558,795" sap2010:WorkflowViewState.IdRef="If_6">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <If.Then>
-                <Sequence sap:VirtualizedContainerService.HintSize="376,618" sap2010:WorkflowViewState.IdRef="Sequence_18">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <ui:Comment sap:VirtualizedContainerService.HintSize="334,74" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Postpone Date Set to 5th of Month in Config File" />
-                  <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_67">
-                    <Assign.To>
-                      <OutArgument x:TypeArguments="x:String">[ReportName]</OutArgument>
-                    </Assign.To>
-                    <Assign.Value>
-                      <InArgument x:TypeArguments="x:String">Ending Inventory</InArgument>
-                    </Assign.Value>
-                  </Assign>
-                  <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_92">
-                    <Assign.To>
-                      <OutArgument x:TypeArguments="x:String">[StartDateString]</OutArgument>
-                    </Assign.To>
-                    <Assign.Value>
-                      <InArgument x:TypeArguments="x:String">[StartDate.ToString("MMM dd, yyyy (ddd)")]</InArgument>
-                    </Assign.Value>
-                  </Assign>
-                  <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_93">
-                    <Assign.To>
-                      <OutArgument x:TypeArguments="x:String">[EndDateString]</OutArgument>
-                    </Assign.To>
-                    <Assign.Value>
-                      <InArgument x:TypeArguments="x:String">[EndDate.ToString("MMM dd, yyyy (ddd)")]</InArgument>
-                    </Assign.Value>
-                  </Assign>
-                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Add Que Item workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_18" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="QSRSoft Add Que Item.xaml">
-                    <ui:InvokeWorkflowFile.Arguments>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_QueueName">[QueueName]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_ReportName">[ReportName]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_ClientName">[ClientName]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_ClientNum">[ClientNum]</InArgument>
-                      <InArgument x:TypeArguments="s:DateTime" x:Key="in_PostponeDate">[EndingInvPostponeDate]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_StartDate">[StartDateString]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_EndDate">[EndDateString]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_Priority">[Priority]</InArgument>
-                      <InArgument x:TypeArguments="s:DateTime" x:Key="in_Deadline">[EndingInvDeadline]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_FirmID">[FirmID]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_Subfolder">[Subfolder]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_Query">[Query]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_RequestWorkbookName">[RequestWorkbookName]</InArgument>
-                    </ui:InvokeWorkflowFile.Arguments>
-                  </ui:InvokeWorkflowFile>
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="376,618" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:Comment sap:VirtualizedContainerService.HintSize="334,74" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Postpone Date Set to 5th of Month in Config File" />
+                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_67">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[ReportName]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">Ending Inventory</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_92">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[StartDateString]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[StartDate.ToString("MMM dd, yyyy (ddd)")]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_93">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[EndDateString]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[EndDate.ToString("MMM dd, yyyy (ddd)")]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Add Que Item workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_18" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="QSRSoft Add Que Item.xaml">
+                          <ui:InvokeWorkflowFile.Arguments>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_QueueName">[QueueName]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_ReportName">[ReportName]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_ClientName">[ClientName]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_ClientNum">[ClientNum]</InArgument>
+                            <InArgument x:TypeArguments="s:DateTime" x:Key="in_PostponeDate">[EndingInvPostponeDate]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_StartDate">[StartDateString]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_EndDate">[EndDateString]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_Priority">[Priority]</InArgument>
+                            <InArgument x:TypeArguments="s:DateTime" x:Key="in_Deadline">[EndingInvDeadline]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_FirmID">[FirmID]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_Subfolder">[Subfolder]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_Query">[Query]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_RequestWorkbookName">[RequestWorkbookName]</InArgument>
+                          </ui:InvokeWorkflowFile.Arguments>
+                        </ui:InvokeWorkflowFile>
+                      </Sequence>
+                    </If.Then>
+                  </If>
                 </Sequence>
               </If.Then>
             </If>

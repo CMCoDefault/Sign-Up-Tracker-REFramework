@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1007,3468</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>899,3468</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Add_Items_to_Que_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="44">
@@ -400,7 +400,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:CommentOut>
-                              <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DeferDate="[PostponeDate]" DisplayName="Add Queue Item" sap:VirtualizedContainerService.HintSize="569,22" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" Priority="Normal" QueueType="[in_Config(&quot;AllianceQueueName&quot;).ToString]" Reference="[clientNum+&quot;_&quot;+reportID+&quot;_&quot;+ProcessName+&quot;_&quot;+now.date.ToString(&quot;MMddyyyy&quot;)]">
+                              <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Add Queue Item" sap:VirtualizedContainerService.HintSize="569,22" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" Priority="Normal" QueueType="[in_Config(&quot;AllianceQueueName&quot;).ToString]" Reference="[clientNum+&quot;_&quot;+reportID+&quot;_&quot;+ProcessName+&quot;_&quot;+now.date.ToString(&quot;MMddyyyy&quot;)]">
                                 <ui:AddQueueItem.ItemInformation>
                                   <InArgument x:TypeArguments="x:String" x:Key="ClientNum">[clientNum]</InArgument>
                                   <InArgument x:TypeArguments="x:String" x:Key="StartDate">[StartDate]</InArgument>
